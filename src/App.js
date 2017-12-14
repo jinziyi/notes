@@ -7,10 +7,10 @@ import './style.scss'
 export default class App extends Component{
 	render(){
 		return (
-			<div className="app-root">
-				<div>
+			<div styleName={'app-root'}>
+				<span>
 					Hello World!
-				</div>
+				</span>
 			</div>
 		)
 	}

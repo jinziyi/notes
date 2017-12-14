@@ -8,7 +8,7 @@ const app = new Koa();
 const path = require('path');
 const serve = require('koa-static');
 
-const main = serve(path.join(__dirname, '../dist/'));
+const main = serve(path.join(__dirname, '../dist/'), {maxage: 7 * 24 * 60 * 60});
 
 app.use(compress());
 app.use(main);

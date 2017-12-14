@@ -4,19 +4,31 @@
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
 	// devtool: 'source-map',
 	plugins: [
+		new CleanWebpackPlugin(
+			[__dirname + '/../dist'],
+			{
+				root: __dirname + '/../',       　　　　	//根目录
+				verbose:  true,        　　　　　　　　　　//开启在控制台输出信息
+				dry:      false        　　　　　　　　　　//启用删除文件
+			}
+		),
 		new UglifyJSPlugin({
 			sourceMap: true,
-			minimize: true
+			minimize: true,
+			uglifyOptions: {
+				warnings: false,
+			}
 		}),
 		new webpack.HashedModuleIdsPlugin(),
 		new webpack.optimize.CommonsChunkPlugin({
-			name: 'runtime'
+			name: 'runtime',
 		}),
 		new webpack.DefinePlugin({
 			'process.env': {
@@ -31,9 +43,25 @@ module.exports = merge(common, {
 				test: /\.s?css$/,
 				use: ExtractTextPlugin.extract({
 					fallback: 'style-loader',
-					use: ['css-loader', 'sass-loader']
+					use: [{
+						loader: 'css-loader',
+						options: {
+							modules: true,
+							importLoaders: 1,
+							localIdentName: '[path]_[name]_[local]-[hash:base64:5]',
+						}
+					}, 'sass-loader', {
+						loader: 'postcss-loader',
+						options: {
+							ident: 'postcss',
+							plugins: (loader) => [
+								require('postcss-cssnext')(),
+							]
+						}
+					},
+					]
 				})
-			}
-		]
+			},
+		],
 	},
 })

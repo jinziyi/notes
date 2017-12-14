@@ -3,8 +3,8 @@
  */
 const webpack = require('webpack');
 const path = require('path');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const root = path.resolve(__dirname + '/../');
 
 module.exports = {
 	entry: {
@@ -20,8 +20,8 @@ module.exports = {
 		chunkFilename: '[name].[chunkhash].js',
 		path: path.resolve(__dirname, '../dist'),
 	},
+	context: root,
 	plugins: [
-		new CleanWebpackPlugin(['dist']),
 		new HtmlWebpackPlugin({
 			template: 'index.html'
 		}),
@@ -32,13 +32,11 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.s?css$/,
-				use: ['style-loader', 'css-loader', 'sass-loader'],
-			},
-			{
 				test: /\.js$/,
 				exclude: /(node_modules)/,
-				use: ['babel-loader']
+				use: [{
+					loader: 'babel-loader',
+				}]
 			},
 			{
 				test: /\.html$/,
@@ -46,4 +44,7 @@ module.exports = {
 			},
 		],
 	},
+	resolve: {
+		extensions: ['.js', '.jsx', '.scss', '.css'],
+	}
 };
