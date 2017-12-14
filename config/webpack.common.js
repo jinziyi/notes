@@ -4,7 +4,6 @@
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const root = path.resolve(__dirname + '/../');
 
 module.exports = {
@@ -29,33 +28,9 @@ module.exports = {
 		new webpack.optimize.CommonsChunkPlugin({
 			name: 'vendor',
 		}),
-		new ExtractTextPlugin('[name].[contenthash].css'),
 	],
 	module: {
 		rules: [
-			{
-				test: /\.s?css$/,
-				use: ExtractTextPlugin.extract({
-					fallback: 'style-loader',
-					use: [{
-						loader: 'css-loader',
-						options: {
-							modules: true,
-							importLoaders: 1,
-							localIdentName: '[path]_[name]_[local]-[hash:base64:5]',
-						}
-					}, 'sass-loader', {
-						loader: 'postcss-loader',
-						options: {
-							ident: 'postcss',
-							plugins: (loader) => [
-								require('postcss-cssnext')(),
-							]
-						}
-					},
-					]
-				})
-			},
 			{
 				test: /\.js$/,
 				exclude: /(node_modules)/,

@@ -27,4 +27,29 @@ module.exports = merge(common, {
 			minChunks: Infinity
 		}),
 	],
+	module: {
+		rules: [
+			{
+				test: /\.s?css$/,
+				use: ['style-loader',
+					{
+						loader: 'css-loader',
+						options: {
+							modules: true,
+							importLoaders: 1,
+							localIdentName: '[path]_[name]_[local]-[hash:base64:5]',
+						}
+					}, 'sass-loader', {
+						loader: 'postcss-loader',
+						options: {
+							ident: 'postcss',
+							plugins: (loader) => [
+								require('postcss-cssnext')(),
+							]
+						}
+					},
+				]
+			},
+		]
+	}
 });

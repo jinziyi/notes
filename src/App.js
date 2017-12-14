@@ -7,9 +7,9 @@ import './style.scss'
 export default class App extends Component{
 	render(){
 		return (
-			<div className={'app-root'}>
+			<div styleName={'app-root'}>
 				<span>
-					Hello World!!!
+					Hello World!
 				</span>
 			</div>
 		)
