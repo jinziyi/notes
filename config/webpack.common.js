@@ -3,9 +3,9 @@
  */
 const webpack = require('webpack');
 const path = require('path');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const root = path.resolve(__dirname + '/../');
 
 module.exports = {
 	entry: {
@@ -21,15 +21,15 @@ module.exports = {
 		chunkFilename: '[name].[chunkhash].js',
 		path: path.resolve(__dirname, '../dist'),
 	},
+	context: root,
 	plugins: [
-		new CleanWebpackPlugin(['dist']),
 		new HtmlWebpackPlugin({
 			template: 'index.html'
 		}),
 		new webpack.optimize.CommonsChunkPlugin({
 			name: 'vendor',
 		}),
-		new ExtractTextPlugin('[name].css'),
+		new ExtractTextPlugin('[name].[contenthash].css'),
 	],
 	module: {
 		rules: [
@@ -37,13 +37,31 @@ module.exports = {
 				test: /\.s?css$/,
 				use: ExtractTextPlugin.extract({
 					fallback: 'style-loader',
-					use: ['css-loader', 'sass-loader']
+					use: [{
+						loader: 'css-loader',
+						options: {
+							modules: true,
+							importLoaders: 1,
+							localIdentName: '[path]_[name]_[local]-[hash:base64:5]',
+						}
+					}, 'sass-loader', {
+						loader: 'postcss-loader',
+						options: {
+							ident: 'postcss',
+							plugins: (loader) => [
+								require('postcss-cssnext')(),
+							]
+						}
+					},
+					]
 				})
 			},
 			{
 				test: /\.js$/,
 				exclude: /(node_modules)/,
-				use: ['babel-loader']
+				use: [{
+					loader: 'babel-loader',
+				}]
 			},
 			{
 				test: /\.html$/,
@@ -51,4 +69,7 @@ module.exports = {
 			},
 		],
 	},
+	resolve: {
+		extensions: ['.js', '.jsx', '.scss', '.css'],
+	}
 };

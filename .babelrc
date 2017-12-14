@@ -4,5 +4,20 @@
     "react",
     "stage-0"
   ],
-  "plugins": ["react-hot-loader/babel"]
+  "plugins": [
+    "react-hot-loader/babel",
+    "transform-decorators-legacy",
+    [
+      "react-css-modules",
+      {
+        "filetypes": {
+          ".scss": {
+            "syntax": "postcss-scss"
+          }
+        },
+        "generateScopedName": "[path]_[name]_[local]-[hash:base64:5]",
+        "webpackHotModuleReloading": true
+      }
+    ]
+  ]
 }
