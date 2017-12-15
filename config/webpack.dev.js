@@ -14,10 +14,14 @@ module.exports = merge(common, {
 		path: path.resolve(__dirname, 'dist'),
 	},
 	devServer: {
-		contentBase: './dist',
-		stats: "minimal",
+		stats: {
+			assets: true,
+			modules: false,
+		},
+		historyApiFallback: true,
 		hot: true,
 		port: 3000,
+		compress: true,
 	},
 	plugins: [
 		new webpack.NamedModulesPlugin(),
@@ -37,7 +41,7 @@ module.exports = merge(common, {
 						options: {
 							modules: true,
 							importLoaders: 1,
-							localIdentName: '[path]_[name]_[local]-[hash:base64:5]',
+							localIdentName: '[local]-[hash:base64:5]',
 						}
 					}, 'sass-loader', {
 						loader: 'postcss-loader',

@@ -14,9 +14,9 @@ module.exports = merge(common, {
 		new CleanWebpackPlugin(
 			[__dirname + '/../dist'],
 			{
-				root: __dirname + '/../',       　　　　	//根目录
-				verbose:  true,        　　　　　　　　　　//开启在控制台输出信息
-				dry:      false        　　　　　　　　　　//启用删除文件
+				root: __dirname + '/..',       　　　　	//根目录
+				verbose: true,        　　　　　　　　　　//开启在控制台输出信息
+				dry: false        　　　　　　　　　　//启用删除文件
 			}
 		),
 		new UglifyJSPlugin({
@@ -48,7 +48,7 @@ module.exports = merge(common, {
 						options: {
 							modules: true,
 							importLoaders: 1,
-							localIdentName: '[path]_[name]_[local]-[hash:base64:5]',
+							localIdentName: '[local]-[hash:base64:5]',
 						}
 					}, 'sass-loader', {
 						loader: 'postcss-loader',
@@ -64,4 +64,8 @@ module.exports = merge(common, {
 			},
 		],
 	},
+	stats: {
+		assets: true,
+		modules: false,
+	}
 })

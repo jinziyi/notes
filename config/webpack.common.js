@@ -13,7 +13,7 @@ module.exports = {
 			'react-hot-loader/patch',
 			'./src/index.js'
 		],
-		vendor: ['react', 'react-dom', 'babel-polyfill'],
+		vendor: ['react', 'react-dom', 'babel-polyfill', 'react-router-dom', 'react-fontawesome'],
 	},
 	output: {
 		filename: '[name].[chunkhash].js',
@@ -42,9 +42,38 @@ module.exports = {
 				test: /\.html$/,
 				use: ['html-loader']
 			},
+			{
+				test: /\.(png|jpg|gif|svg)$/,
+				use: [
+					{
+						loader: 'url-loader',
+						options: {
+							name: '[name].[hash].[ext]',
+							outputPath: 'assets/images/',
+							limit: 8192
+						}
+					}
+				]
+			},
+			{
+				test: /\.(eot|ttf|woff|woff2)$/,
+				use: [
+					{
+						loader: 'url-loader',
+						options: {
+							name: '[name].[hash].[ext]',
+							outputPath: 'assets/fonts/',
+							limit: 8192
+						}
+					}
+				]
+			},
 		],
 	},
 	resolve: {
 		extensions: ['.js', '.jsx', '.scss', '.css'],
+		alias: {
+			'components': __dirname + '/../src/components',
+		}
 	}
 };

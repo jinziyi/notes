@@ -4,19 +4,10 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import {AppContainer} from 'react-hot-loader'
-import App from './App';
+import App from './route/App';
+import './style/index.scss';
 
-const render = Component => {
-	ReactDOM.render(
-		<AppContainer>
-			<Component />
-		</AppContainer>,
-		document.getElementById('react-root')
-	)
-}
-
-
-render(App)
+ReactDOM.render(<AppContainer><App/></AppContainer>, document.getElementById('react-root'));
 
 if (module.hot) {
 	module.hot.accept();
