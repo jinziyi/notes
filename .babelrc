@@ -15,7 +15,7 @@
             "syntax": "postcss-scss"
           }
         },
-        "generateScopedName": "[path]_[name]_[local]-[hash:base64:5]",
+        "generateScopedName": "[local]-[hash:base64:5]",
         "webpackHotModuleReloading": true
       }
     ]
