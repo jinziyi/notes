@@ -1,7 +1,7 @@
 {
-  "name": "project-seed",
+  "name": "notes",
   "version": "1.0.0",
-  "description": "This is the seed of all the projects",
+  "description": "这是一个简易的便签本应用",
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf ./dist",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jinziyi/project-seed.git"
+    "url": "git+https://github.com/jinziyi/notes.git"
   },
   "keywords": [
     "react",
@@ -24,9 +24,9 @@
   "author": "cjy",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jinziyi/project-seed/issues"
+    "url": "https://github.com/jinziyi/notes/issues"
   },
-  "homepage": "https://github.com/jinziyi/project-seed#readme",
+  "homepage": "https://github.com/jinziyi/notes#readme",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
