@@ -10,7 +10,6 @@ module.exports = merge(common, {
 	devtool: 'inline-source-map',
 	output: {
 		filename: '[name].[hash].js',
-		chunkFilename: '[name].[hash].js',
 		path: path.resolve(__dirname, 'dist'),
 	},
 	devServer: {

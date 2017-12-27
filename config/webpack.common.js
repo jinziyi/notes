@@ -13,7 +13,8 @@ module.exports = {
 			'react-hot-loader/patch',
 			'./src/index.js'
 		],
-		vendor: ['react', 'react-dom', 'babel-polyfill', 'react-router-dom', 'react-fontawesome'],
+		vendor: ['react', 'react-dom', 'babel-polyfill',
+			'react-router-dom', 'react-fontawesome', 'redux', 'react-redux', 'react-router-redux', 'redux-thunk'],
 	},
 	output: {
 		filename: '[name].[chunkhash].js',
@@ -34,10 +35,22 @@ module.exports = {
 			{
 				test: /\.js$/,
 				exclude: /(node_modules)/,
-				use: [{
-					loader: 'babel-loader',
-				}]
+				use: [
+					{
+						loader: 'babel-loader',
+					},
+				]
 			},
+			// {
+			// 	test: /\.bundle\.js$/,
+			// 	use: [{
+			// 		loader: 'bundle-loader',
+			// 		options: {
+			// 			lazy: true,
+			// 			name: '[name]'
+			// 		}
+			// 	}]
+			// },
 			{
 				test: /\.html$/,
 				use: ['html-loader']
@@ -74,6 +87,8 @@ module.exports = {
 		extensions: ['.js', '.jsx', '.scss', '.css'],
 		alias: {
 			'components': __dirname + '/../src/components',
+			'containers': __dirname + '/../src/containers',
+			'actions': __dirname + '/../src/redux/reducers',
 		}
 	}
 };
