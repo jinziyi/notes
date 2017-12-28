@@ -29,4 +29,10 @@ class Bundle extends Component {
 	}
 }
 
-export default Bundle
+export default Bundle;
+
+export const bundle = getComponent => (props) => (
+	<Bundle load={getComponent}>
+		{(Chat) => <Chat {...props}/>}
+	</Bundle>
+)
