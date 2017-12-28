@@ -29,6 +29,11 @@ module.exports = merge(common, {
 			name: 'manifest',
 			minChunks: Infinity
 		}),
+		new webpack.DllReferencePlugin({
+			scope: "beta",
+			manifest: require("./vendor/manifest.json"), // eslint-disable-line
+			extensions: [".js", ".jsx"]
+		})
 	],
 	module: {
 		rules: [

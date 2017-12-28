@@ -5,6 +5,7 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const root = path.resolve(__dirname + '/../');
+const vendors = require('./vendors.json');
 
 module.exports = {
 	entry: {
@@ -13,8 +14,7 @@ module.exports = {
 			'react-hot-loader/patch',
 			'./src/index.js'
 		],
-		vendor: ['react', 'react-dom', 'babel-polyfill',
-			'react-router-dom', 'react-fontawesome', 'redux', 'react-redux', 'react-router-redux', 'redux-thunk'],
+		vendor: vendors,
 	},
 	output: {
 		filename: '[name].[chunkhash].js',

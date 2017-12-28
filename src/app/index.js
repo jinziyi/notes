@@ -12,20 +12,9 @@ import {
 import wrapWithRedux from '../redux';
 import './style.scss';
 import Home from '../routes/home';
-// import Login from '../routes/login/index.bundle';
+import Login from '../routes/login/route';
 import NoMatch from '../routes/noMatch';
 
-import Bundle from 'components/Bundle';
-
-const Login = (props) => (
-	<Bundle load={(cb) => {
-		require.ensure([], require => {
-			cb(require('../routes/login/index.js'));
-		}, 'login');
-	}}>
-		{(Chat) => <Chat {...props}/>}
-	</Bundle>
-)
 
 class App extends PureComponent {
 	render() {
