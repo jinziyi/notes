@@ -19,8 +19,8 @@ router.get('*', async (ctx, next) => {
 	ctx.response.body = fs.createReadStream(path.join(__dirname, distPath + 'index.html'));
 })
 
+app.use(compress());
 app.use(main);
 app.use(router.routes());
-app.use(compress());
 app.listen(3000);
 console.log('app is runing at http://localhost:3000')
