@@ -11,7 +11,7 @@ import {
 } from 'react-router-dom';
 import wrapWithRedux from '../redux';
 import './style.scss';
-import Home from '../routes/home/route';
+import Home from '../routes/home';
 import Login from '../routes/login/route';
 import NoMatch from '../routes/noMatch/route';
 

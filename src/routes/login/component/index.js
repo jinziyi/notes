@@ -12,7 +12,7 @@ export default class Login extends Component {
 		}
 		return (
 			<div onClick={login} className="center">
-				请登陆
+				请登陆!
 			</div>
 		)
 	}

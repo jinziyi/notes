@@ -9,7 +9,7 @@ const common = require('./webpack.common.js');
 module.exports = merge(common, {
 	devtool: 'inline-source-map',
 	output: {
-		filename: '[name].[hash].js',
+		filename: '[name].bundle.js',
 		path: path.resolve(__dirname, 'dist'),
 	},
 	devServer: {

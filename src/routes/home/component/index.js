@@ -12,7 +12,7 @@ export default class Home extends PureComponent {
 		return (
 			<div className="center col">
 				<Link to="/demo">
-					Hello World!
+					Hello World
 					<Icon name="qq"/>
 				</Link>
 				<div onClick={this.props.logout}>
