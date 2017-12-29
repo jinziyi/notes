@@ -20,6 +20,7 @@ module.exports = merge(common, {
 		historyApiFallback: true,
 		hot: true,
 		port: 3000,
+		clientLogLevel: 'info',
 		compress: true,
 	},
 	plugins: [
@@ -30,7 +31,7 @@ module.exports = merge(common, {
 			minChunks: Infinity
 		}),
 		new webpack.DllReferencePlugin({
-			scope: "beta",
+			context: path.join(__dirname, "dll"),
 			manifest: require("./vendor/manifest.json"), // eslint-disable-line
 			extensions: [".js", ".jsx"]
 		})

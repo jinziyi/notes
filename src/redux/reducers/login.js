@@ -22,8 +22,8 @@ export const logout = (data) => dispatch => dispatch({
 const initialState = false
 
 export const reducers = {
-	[LOGIN]: state => ({isLogin: true}),
-	[LOGOUT]: state => ({isLogin: false}),
+	[LOGIN]: login => true,
+	[LOGOUT]: login => false,
 }
 
 export default createReducer(initialState, reducers);
