@@ -5,7 +5,6 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const root = path.resolve(__dirname + '/../');
-const vendors = require('./vendors.json');
 
 module.exports = {
 	entry: {
@@ -14,21 +13,22 @@ module.exports = {
 			'react-hot-loader/patch',
 			'./src/index.js'
 		],
-		vendor: vendors,
 	},
 	output: {
 		filename: '[name].[chunkhash].js',
 		chunkFilename: '[name].[chunkhash].js',
 		path: path.resolve(__dirname, '../dist'),
-		publicPath: "/"
 	},
 	context: root,
 	plugins: [
 		new HtmlWebpackPlugin({
 			template: 'index.html'
 		}),
-		new webpack.optimize.CommonsChunkPlugin({
+		new webpack.DllReferencePlugin({
+			context: __dirname,
 			name: 'vendor',
+			manifest: require("../dist/dll/manifest.json"), // eslint-disable-line
+			extensions: [".js", ".jsx"]
 		}),
 	],
 	module: {

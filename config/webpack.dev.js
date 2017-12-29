@@ -7,16 +7,18 @@ const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
+	// devtool: 'eval-source-map',
 	devtool: 'inline-source-map',
 	output: {
 		filename: '[name].bundle.js',
-		path: path.resolve(__dirname, 'dist'),
+		path: path.resolve(__dirname, '../dist'),
 	},
 	devServer: {
 		stats: {
 			assets: true,
 			modules: false,
 		},
+		contentBase: path.resolve(__dirname, '../dist'),
 		historyApiFallback: true,
 		hot: true,
 		port: 3000,
@@ -25,16 +27,12 @@ module.exports = merge(common, {
 	},
 	plugins: [
 		new webpack.NamedModulesPlugin(),
-		new webpack.HotModuleReplacementPlugin(),
-		new webpack.optimize.CommonsChunkPlugin({
-			name: 'manifest',
-			minChunks: Infinity
+		new webpack.DefinePlugin({
+			'process.env': {
+				'NODE_ENV': JSON.stringify('development')
+			}
 		}),
-		new webpack.DllReferencePlugin({
-			context: path.join(__dirname, "dll"),
-			manifest: require("./vendor/manifest.json"), // eslint-disable-line
-			extensions: [".js", ".jsx"]
-		})
+		new webpack.HotModuleReplacementPlugin(),
 	],
 	module: {
 		rules: [
