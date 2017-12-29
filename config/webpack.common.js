@@ -20,6 +20,7 @@ module.exports = {
 		filename: '[name].[chunkhash].js',
 		chunkFilename: '[name].[chunkhash].js',
 		path: path.resolve(__dirname, '../dist'),
+		publicPath: "/"
 	},
 	context: root,
 	plugins: [
