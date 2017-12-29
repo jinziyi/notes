@@ -13,7 +13,6 @@ module.exports = {
 			'react-hot-loader/patch',
 			'./src/index.js'
 		],
-		vendor: ['react', 'react-dom', 'babel-polyfill', 'react-router-dom', 'react-fontawesome'],
 	},
 	output: {
 		filename: '[name].[chunkhash].js',
@@ -25,8 +24,11 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: 'index.html'
 		}),
-		new webpack.optimize.CommonsChunkPlugin({
+		new webpack.DllReferencePlugin({
+			context: __dirname,
 			name: 'vendor',
+			manifest: require("../dist/dll/manifest.json"), // eslint-disable-line
+			extensions: [".js", ".jsx"]
 		}),
 	],
 	module: {
@@ -34,10 +36,22 @@ module.exports = {
 			{
 				test: /\.js$/,
 				exclude: /(node_modules)/,
-				use: [{
-					loader: 'babel-loader',
-				}]
+				use: [
+					{
+						loader: 'babel-loader',
+					},
+				]
 			},
+			// {
+			// 	test: /\.bundle\.js$/,
+			// 	use: [{
+			// 		loader: 'bundle-loader',
+			// 		options: {
+			// 			lazy: true,
+			// 			name: '[name]'
+			// 		}
+			// 	}]
+			// },
 			{
 				test: /\.html$/,
 				use: ['html-loader']
@@ -74,6 +88,8 @@ module.exports = {
 		extensions: ['.js', '.jsx', '.scss', '.css'],
 		alias: {
 			'components': __dirname + '/../src/components',
+			'containers': __dirname + '/../src/containers',
+			'actions': __dirname + '/../src/redux/reducers',
 		}
 	}
 };

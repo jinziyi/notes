@@ -16,5 +16,8 @@
 	.center{
 		@include flex();
 		text-align: center;
+		&.col{
+			flex-direction: column;
+		}
 	}
 }

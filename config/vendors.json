@@ -1,0 +1,12 @@
+[
+  "react",
+  "react-dom",
+  "babel-polyfill",
+  "history",
+  "react-router-dom",
+  "react-fontawesome",
+  "redux",
+  "react-redux",
+  "react-router-redux",
+  "redux-thunk"
+]

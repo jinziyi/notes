@@ -9,12 +9,13 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
-	// devtool: 'source-map',
+	devtool: 'eval',
 	plugins: [
 		new CleanWebpackPlugin(
 			[__dirname + '/../dist'],
 			{
 				root: __dirname + '/..',       　　　　	//根目录
+				exclude: ['dll'],
 				verbose: true,        　　　　　　　　　　//开启在控制台输出信息
 				dry: false        　　　　　　　　　　//启用删除文件
 			}
