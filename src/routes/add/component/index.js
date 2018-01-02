@@ -12,7 +12,7 @@ export default class Home extends PureComponent {
 	render() {
 		const {groups = []} = this.props;
 		return (
-			<div className="v-home-root">
+			<div className="v-add-root">
 				<div className="body scroll">
 					{groups.map((item) => (
 						<Item {...this.props} {...item}/>

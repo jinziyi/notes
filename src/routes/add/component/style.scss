@@ -1,0 +1,10 @@
+@import "../../../style/vars";
+
+.v-add-root{
+	@include flex(column);
+	align-items: stretch;
+	height: 100%;
+	.body{
+		flex: 1;
+	}
+}

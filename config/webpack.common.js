@@ -89,6 +89,7 @@ module.exports = {
 		alias: {
 			'components': __dirname + '/../src/components',
 			'containers': __dirname + '/../src/containers',
+			'constants': __dirname + '/../src/constants',
 			'actions': __dirname + '/../src/redux/reducers',
 		}
 	}

@@ -19,7 +19,7 @@ export const logout = (data) => dispatch => dispatch({
 
 
 //reducer
-const initialState = false
+const initialState = true;
 
 export const reducers = {
 	[LOGIN]: login => true,

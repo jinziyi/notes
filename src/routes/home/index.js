@@ -4,11 +4,20 @@
 import React, {PureComponent} from 'react';
 import {connect} from 'react-redux';
 import Component from './component';
-import {logout} from 'actions/login'
+import {logout} from 'actions/login';
+import {getRoute} from 'constants/routes';
 
 const mapStateToProps = (state) => {
 	return {
-		isLogin: state.login
+		isLogin: state.login,
+		groups: [
+			{
+				title: '所有',
+				count: 0,
+				groupId: 0,
+			},
+			...state.groups
+		].map(group => ({...group, link: getRoute('groupList', {groupId: group.groupId})})),
 	}
 }
 

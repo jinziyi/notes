@@ -1,6 +1,10 @@
-$primary-color: #0cf;
-$bg-color: #f2f2f2;
-$black: #333;
+$primary-color: #3478f6;
+$bg-color: #efeff4;
+$black: #000;
+$gray: #c7c7cb;
+$border-color: #deddde;
+$icon-default: #a1a1a1;
+$icon-active: $primary-color;
 
 @mixin flex($direction: row){
 	display: flex;

@@ -46,11 +46,6 @@ module.exports = merge(common, {
 					fallback: 'style-loader',
 					use: [{
 						loader: 'css-loader',
-						options: {
-							modules: true,
-							importLoaders: 1,
-							localIdentName: '[local]-[hash:base64:5]',
-						}
 					}, 'sass-loader', {
 						loader: 'postcss-loader',
 						options: {

@@ -12,6 +12,7 @@ module.exports = merge(common, {
 	output: {
 		filename: '[name].bundle.js',
 		path: path.resolve(__dirname, '../dist'),
+		publicPath: '/',
 	},
 	devServer: {
 		stats: {
@@ -41,11 +42,6 @@ module.exports = merge(common, {
 				use: ['style-loader',
 					{
 						loader: 'css-loader',
-						options: {
-							modules: true,
-							importLoaders: 1,
-							localIdentName: '[local]-[hash:base64:5]',
-						}
 					}, 'sass-loader', {
 						loader: 'postcss-loader',
 						options: {
