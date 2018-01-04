@@ -8,14 +8,14 @@ import Item from 'components/Item';
 import requireLogin from 'containers/requireLogin';
 
 @requireLogin
-export default class Home extends PureComponent {
+export default class Setting extends PureComponent {
 	render() {
-		const {groups = []} = this.props;
+		const {settings = []} = this.props;
 		return (
-			<div className="v-add-root">
+			<div className="v-setting-root">
 				<div className="body scroll">
-					{groups.map((item) => (
-						<Item {...this.props} {...item}/>
+					{settings.map((set) => (
+						<Item {...this.props} {...set}/>
 					))}
 				</div>
 				<Footer {...this.props}/>

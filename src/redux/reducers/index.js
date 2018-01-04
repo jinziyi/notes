@@ -1,11 +1,12 @@
 /**
  * Created by cjy on 16/11/23.
  */
-import {combineReducers} from 'redux';
 import login from './login';
-import groups from './groups';
+import settings from './settings';
+import items from './items';
 
 export default {
 	login,
-	groups,
+	settings,
+	items,
 }

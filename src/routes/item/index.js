@@ -4,17 +4,18 @@
 import React, {PureComponent} from 'react';
 import {connect} from 'react-redux';
 import Component from './component';
-import {logout} from 'actions/login';
+import {changeValue} from 'actions/items';
 import routes, {getRoute} from 'constants/routes';
 
 const mapStateToProps = (state, props) => {
 	return {
 		isLogin: state.login,
-		items: state.items.map(item => ({
-			...item,
-			link: getRoute('item', {itemId: item.id})
-		})),
+		values: state.items.find(item => item.id === props.match.params.itemId)
 	}
 }
 
-export default connect(mapStateToProps)(Component);
+const mapDispatchToProps = {
+	changeValue
+}
+
+export default connect(mapStateToProps, mapDispatchToProps,)(Component);

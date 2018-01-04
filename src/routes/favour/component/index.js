@@ -10,7 +10,7 @@ import DataItem from 'components/DataItem';
 import requireLogin from 'containers/requireLogin';
 
 @requireLogin
-export default class Home extends PureComponent {
+export default class Favour extends PureComponent {
 	render() {
 		const {items = [], match} = this.props;
 		return (
@@ -20,7 +20,7 @@ export default class Home extends PureComponent {
 						<DataItem {...this.props} {...item}/>
 					))}
 				</div>
-				<Link to={getRoute('create')} className="tap-position">
+				<Link to={getRoute('create')} className="create">
 					<i className="fa fa-plus-square primary"/>
 				</Link>
 				<Footer {...this.props}/>

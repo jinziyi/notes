@@ -10,16 +10,10 @@ import './style.scss';
 const Footer = ({match = {}}) => {
 	const navs = [
 		{
-			key: 'group',
+			key: 'home',
 			icon: 'file-text-o',
-			link: routes.group,
-			text: '分组',
-		},
-		{
-			key: 'add',
-			icon: 'plus',
-			link: routes.add,
-			text: '新增',
+			link: routes.home,
+			text: '首页',
 		},
 		{
 			key: 'favour',

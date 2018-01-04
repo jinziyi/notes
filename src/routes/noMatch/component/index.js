@@ -2,9 +2,8 @@
  * Created by cjy on 16/11/23.
  */
 import React, {PureComponent} from 'react';
-import {Link} from 'react-router-dom';
 
-export default ({location, history}) => {
+const NoMatch = ({location, history}) => {
 	return (
 		<div className="center col">
 			<div>
@@ -14,3 +13,5 @@ export default ({location, history}) => {
 		</div>
 	)
 }
+
+export default NoMatch;

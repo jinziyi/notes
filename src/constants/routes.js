@@ -3,12 +3,11 @@
  */
 const routes = {
 	login: '/login',
-	group: '/',
-	add: '/add',
-	itemNew: '/item/new',
-	favour: '/favour',
+	home: '/',
 	setting: '/setting',
-	groupList: '/group/:groupId'
+	item: '/item/:itemId',
+	favour: '/favour',
+	create: '/item/create',
 }
 
 export const getRoute = (key, params = {}) => {

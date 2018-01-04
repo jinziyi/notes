@@ -13,8 +13,10 @@ import wrapWithRedux from '../redux';
 import routes from '../constants/routes';
 import './style.scss';
 import Home from '../routes/home';
-import Add from '../routes/add';
 import Login from '../routes/login/route';
+import Setting from '../routes/setting/route';
+import Favour from '../routes/favour/route';
+import Item from '../routes/item/route';
 import NoMatch from '../routes/noMatch';
 
 
@@ -24,9 +26,12 @@ class App extends PureComponent {
 			<Router>
 				<div className="app-root">
 					<Switch>
-						<Route exact path={routes.group} component={Home}/>
-						<Route exact path={routes.add} component={Add}/>
+						<Route exact path={routes.home} component={Home}/>
+						<Route exact path={routes.favour} component={Favour}/>
+						<Route exact path={routes.item} component={Item}/>
+						<Route exact path={routes.create} component={Item}/>
 						<Route exact path={routes.login} component={Login}/>
+						<Route exact path={routes.setting} component={Setting}/>
 						<Route component={NoMatch}/>
 					</Switch>
 				</div>

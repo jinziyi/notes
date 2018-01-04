@@ -6,6 +6,7 @@ import {createStore, combineReducers, applyMiddleware} from 'redux'
 import {Provider} from 'react-redux'
 import createHistory from 'history/createBrowserHistory'
 import {ConnectedRouter, routerReducer, routerMiddleware, push} from 'react-router-redux';
+import {composeWithDevTools} from 'redux-devtools-extension/developmentOnly';
 import thunk from 'redux-thunk';
 import reducers from './reducers'
 
@@ -17,7 +18,7 @@ export const store = createStore(
 		...reducers,
 		router: routerReducer
 	}),
-	applyMiddleware(middleware, thunk)
+	composeWithDevTools(applyMiddleware(middleware, thunk, store => next => action => console.log(store.getState()) || next(action))),
 )
 
 export default (Component) => {

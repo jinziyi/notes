@@ -10,7 +10,10 @@ import routes from 'constants/routes';
 const mapStateToProps = (state) => {
 	return {
 		isLogin: state.login,
-		groups: state.groups.map(group => ({...group, link: routes.itemNew})),
+		settings: state.settings.map(set => ({
+			...set,
+			link: routes[set.route]
+		}))
 	}
 }
 

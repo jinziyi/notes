@@ -14,13 +14,13 @@ const distPath = '../dist/'
 
 const main = serve(path.join(__dirname, distPath), {maxage: 7 * 24 * 60 * 60});
 
-router.get('*', async (ctx, next) => {
+router.get('/', async (ctx, next) => {
 	ctx.response.type = 'html';
 	ctx.response.body = fs.createReadStream(path.join(__dirname, distPath + 'index.html'));
 })
 
 app.use(compress());
-app.use(main);
 app.use(router.routes());
+app.use(main);
 app.listen(3000);
 console.log('app is runing at http://localhost:3000')

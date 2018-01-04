@@ -6,5 +6,5 @@ import {bundle} from 'components/Bundle';
 export default bundle((cb) => {
 	require.ensure([], require => {
 		cb(require('./index.js').default);
-	}, 'add');
+	}, 'favour');
 })

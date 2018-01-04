@@ -1,0 +1,32 @@
+@import "../../style/index";
+
+.c-data-item-root {
+	width: 100%;
+	height: 1.05rem;
+	@include flex();
+	background: #fff;
+	border-bottom: 1px solid $border-color;
+	justify-content: space-between;
+	padding: 0 .36rem;
+	.item-left{
+		.name{
+			color: #666;
+			padding-top: .12rem;
+		}
+	}
+	.item-right{
+		@include flex();
+		justify-content: flex-end;
+		font-size: .24rem;
+		.count{
+			padding-right: .54rem;
+		}
+		.fa-info-circle{
+			font-size: .3rem;
+			margin-right: .2rem;
+		}
+		.fa-chevron-right{
+			color: $icon-default;
+		}
+	}
+}
