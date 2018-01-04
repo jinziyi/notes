@@ -18,7 +18,7 @@ export const store = createStore(
 		...reducers,
 		router: routerReducer
 	}),
-	composeWithDevTools(applyMiddleware(middleware, thunk, store => next => action => console.log(store.getState()) || next(action))),
+	composeWithDevTools(applyMiddleware(middleware, thunk,))
 )
 
 export default (Component) => {

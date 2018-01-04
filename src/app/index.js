@@ -10,6 +10,8 @@ import {
 	Link
 } from 'react-router-dom';
 import wrapWithRedux from '../redux';
+import ToastSeed from 'components/Toast';
+import {connectToast} from 'actions/toast';
 import routes from '../constants/routes';
 import './style.scss';
 import Home from '../routes/home';
@@ -19,6 +21,7 @@ import Favour from '../routes/favour/route';
 import Item from '../routes/item/route';
 import NoMatch from '../routes/noMatch';
 
+const Toast = connectToast(ToastSeed);
 
 class App extends PureComponent {
 	render() {
@@ -34,6 +37,7 @@ class App extends PureComponent {
 						<Route exact path={routes.setting} component={Setting}/>
 						<Route component={NoMatch}/>
 					</Switch>
+					<Toast/>
 				</div>
 			</Router>
 		)

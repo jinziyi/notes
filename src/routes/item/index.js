@@ -4,7 +4,7 @@
 import React, {PureComponent} from 'react';
 import {connect} from 'react-redux';
 import Component from './component';
-import {changeValue} from 'actions/items';
+import {updateItem, createItem, deleteItem} from 'actions/items';
 import routes, {getRoute} from 'constants/routes';
 
 const mapStateToProps = (state, props) => {
@@ -15,7 +15,9 @@ const mapStateToProps = (state, props) => {
 }
 
 const mapDispatchToProps = {
-	changeValue
+	updateItem,
+	createItem,
+	deleteItem
 }
 
 export default connect(mapStateToProps, mapDispatchToProps,)(Component);

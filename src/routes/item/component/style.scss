@@ -11,7 +11,7 @@
 			flex: 1;
 		}
 		.favour {
-			padding: 0 .36rem;
+			padding: 0 $padding;
 			.fa-heart-o {
 				font-size: .5rem;
 			}
@@ -22,6 +22,12 @@
 		}
 	}
 	.remain {
-		padding-top: .36rem;
+		padding: $padding 0;
+	}
+	.button-box{
+		padding: $padding;
+		.btn{
+			margin-bottom: $padding / 2;
+		}
 	}
 }

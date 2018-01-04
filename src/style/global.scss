@@ -25,6 +25,25 @@ a {
 	text-decoration: none;
 }
 
+.btn {
+	background: $primary-color;
+	color: #fff;
+	height: .8rem;
+	font-size: .3rem;
+	@include flex();
+	text-align: center;
+	border-radius: .1rem;
+	&:active {
+		background: $primary-color * .85;
+	}
+	&.danger {
+		background: $error;
+		&:active {
+			background: $error * .85;
+		}
+	}
+}
+
 .primary {
 	color: $primary-color;
 }
@@ -42,7 +61,7 @@ a {
 	}
 }
 
-.tap-position{
+.tap-position {
 	position: fixed;
 	right: 10%;
 	bottom: 10%;
