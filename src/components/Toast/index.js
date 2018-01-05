@@ -7,20 +7,33 @@ import './style.scss';
 
 class Toast extends PureComponent {
 	types = {
-		success: 'check-circle-o',
-		error: 'times-circke-o',
+		success: 'check',
+		error: 'times',
 		warning: 'warning',
 	}
+
+	componentWillReceiveProps(np) {
+		if (np.autoClose > 0 && np.isShow === true) {
+			this.t = setTimeout(e => {
+				np.hide()
+			}, np.autoClose)
+		}
+	}
+
+	componentWillUnmount() {
+		this.t && clearTimeout(this.t);
+	}
+
 	render() {
 		const {props, types} = this;
 		const {isShow, text, toastType = 'success'} = props;
 		const icon = types[toastType]
 		return (
 			<div className={`c-toast-root ${isShow ? '' : 'hidden'}`}>
-				<div>
+				<div className="icon-box">
 					<i className={`fa fa-${icon}`}/>
 				</div>
-				<div>
+				<div className="text">
 					{text}
 				</div>
 			</div>

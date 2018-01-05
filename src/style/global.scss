@@ -2,6 +2,10 @@
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
+	white-space: pre-wrap;
+	word-break: break-all;
+	word-wrap: break-word;
+	font-size: .3rem;
 }
 
 html, body {
@@ -25,6 +29,11 @@ a {
 	text-decoration: none;
 }
 
+input{
+	border: none;
+	outline: none;
+}
+
 .btn {
 	background: $primary-color;
 	color: #fff;
@@ -46,6 +55,18 @@ a {
 
 .primary {
 	color: $primary-color;
+}
+
+.success{
+	color: $success;
+}
+
+.warning{
+	color: $warning;
+}
+
+.error{
+	color: $error;
 }
 
 .scroll {

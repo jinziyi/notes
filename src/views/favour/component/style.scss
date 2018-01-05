@@ -1,0 +1,19 @@
+@import "../../../style/vars";
+
+.v-group-root{
+	@include flex(column);
+	align-items: stretch;
+	height: 100%;
+	.body{
+		flex: 1;
+		.empty{
+			padding: $padding;
+		}
+	}
+	.create{
+		position: fixed;
+		right: 10%;
+		bottom: 10%;
+		font-size: .8rem;
+	}
+}

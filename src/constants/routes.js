@@ -2,6 +2,7 @@
  * Created by cjy on 16/11/23.
  */
 const routes = {
+	register: '/register',
 	login: '/login',
 	home: '/',
 	setting: '/setting',

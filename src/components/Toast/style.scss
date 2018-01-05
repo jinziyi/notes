@@ -3,11 +3,26 @@
 .c-toast-root {
 	position: fixed;
 	top: 30%;
-	width: 30%;
+	width: 36%;
 	min-height: 25%;
-	left: 35%;
+	left: 32%;
 	background: rgba(#000, .6);
 	color: #fff;
 	border-radius: .3rem;
-	@include flex();
+	@include flex(column);
+	padding: $padding;
+	z-index: 99;
+	&.hidden{
+		z-index: -1;
+	}
+	.icon-box{
+		.fa{
+			font-size: 1.2rem;
+		}
+	}
+	.text{
+		padding-top: $padding;
+		font-size: .4rem;
+		text-align: center;
+	}
 }

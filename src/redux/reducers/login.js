@@ -7,10 +7,14 @@ import {createReducer} from '../utils';
 export const LOGIN = 'LOGIN';
 export const LOGOUT = 'LOGOUT';
 
-export const login = (data) => dispatch => dispatch({
-	type: LOGIN,
-	data,
-})
+export const login = ({password, cb = e => e}) => dispatch => {
+	if (password === 'cjy123') {
+		cb(true)
+		return dispatch({type: LOGIN})
+	}
+	cb(false)
+	dispatch({type: LOGOUT})
+}
 
 export const logout = (data) => dispatch => dispatch({
 	type: LOGOUT,
@@ -19,7 +23,7 @@ export const logout = (data) => dispatch => dispatch({
 
 
 //reducer
-const initialState = true;
+const initialState = false;
 
 export const reducers = {
 	[LOGIN]: login => true,

@@ -21,13 +21,14 @@ export const hide = (data) => dispatch => dispatch({
 
 //reducer
 const initialState = {
-	isShow: true,
+	isShow: false,
 	toastType: 'success',
 	text: '成功',
+	autoClose: 2000,
 };
 
 export const reducers = {
-	[TOAST_SHOW]: (toast, config) => ({...toast, ...config, isShow: true,}),
+	[TOAST_SHOW]: (toast, {data}) => ({...toast, toastType: 'success', ...data, isShow: true,}),
 	[TOAST_HIDE]: (toast) => ({...toast, isShow: false,}),
 }
 
@@ -37,5 +38,7 @@ export const connectToast = (Component) => {
 	return connect(state => {
 		const {toast} = state;
 		return toast;
+	}, {
+		hide,
 	})(Component)
 }

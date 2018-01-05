@@ -1,0 +1,6 @@
+@import "../../../style/vars";
+@import "../../login/component/style";
+
+.v-register-root {
+	@extend .v-login-root;
+}

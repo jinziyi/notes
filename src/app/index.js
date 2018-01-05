@@ -14,12 +14,13 @@ import ToastSeed from 'components/Toast';
 import {connectToast} from 'actions/toast';
 import routes from '../constants/routes';
 import './style.scss';
-import Home from '../routes/home';
-import Login from '../routes/login/route';
-import Setting from '../routes/setting/route';
-import Favour from '../routes/favour/route';
-import Item from '../routes/item/route';
-import NoMatch from '../routes/noMatch';
+import Home from '../views/home';
+import Register from '../views/register/route';
+import Login from '../views/login/route';
+import Setting from '../views/setting/route';
+import Favour from '../views/favour/route';
+import Item from '../views/item/route';
+import NoMatch from '../views/noMatch';
 
 const Toast = connectToast(ToastSeed);
 
@@ -33,6 +34,7 @@ class App extends PureComponent {
 						<Route exact path={routes.favour} component={Favour}/>
 						<Route exact path={routes.item} component={Item}/>
 						<Route exact path={routes.create} component={Item}/>
+						<Route exact path={routes.register} component={Register}/>
 						<Route exact path={routes.login} component={Login}/>
 						<Route exact path={routes.setting} component={Setting}/>
 						<Route component={NoMatch}/>
