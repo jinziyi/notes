@@ -9,9 +9,92 @@
     <meta name="screen-orientation" content="portrait">
     <meta name="x5-orientation" content="portrait">
     <meta name="description" content="notes">
-<link href="/app.3081e37a8a01895886bd3658b5b02ad2.css" rel="stylesheet"></head>
+    <meta name="theme-color" content="#3478f6"/>
+    <link rel="manifest" href="/PWA/manifest.json">
+    <style>
+        #_pre_loading {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 100;
+            position: fixed;
+            flex-wrap: nowrap;
+            left: 0;
+            top: 0;
+        }
+
+        ._pre_loading {
+            width: .5rem;
+            height: 2.5rem;
+            display: block;
+            background: #0d0ae1;
+            margin: 0 .25rem;
+        }
+
+        ._pre_loading_wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        ._pre_loading_text {
+            width: 100%;
+            padding: 2rem;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        ._pre_loading:first-of-type {
+            animation: loading .5s ease forwards alternate infinite;
+        }
+
+        ._pre_loading:nth-of-type(2) {
+            animation: loading .5s ease .1s forwards alternate infinite;
+        }
+
+        ._pre_loading:nth-of-type(3) {
+            animation: loading .5s ease .2s forwards alternate infinite;
+        }
+
+        ._pre_loading:nth-of-type(4) {
+            animation: loading .5s ease .3s forwards alternate infinite;
+        }
+
+        ._pre_loading:nth-of-type(5) {
+            animation: loading .5s ease .4s forwards alternate infinite;
+        }
+
+        ._pre_loading:nth-of-type(6) {
+            animation: loading .5s ease .5s forwards alternate infinite;
+        }
+
+        @keyframes loading {
+            from {
+                transform: scale(1, 1);
+            }
+            to {
+                transform: scale(1, 2);
+            }
+        }
+    </style>
+<link href="/app.fe46364cd8a42f209144f5abfa526dc6.css" rel="stylesheet"></head>
 <body>
-<div id="react-root"></div>
+<div id="react-root">
+    <div id="_pre_loading">
+        <div class="_pre_loading_wrapper">
+            <div class="_pre_loading"></div>
+            <div class="_pre_loading"></div>
+            <div class="_pre_loading"></div>
+            <div class="_pre_loading"></div>
+            <div class="_pre_loading"></div>
+            <div class="_pre_loading"></div>
+        </div>
+        <section class="_pre_loading_text">请稍等...</section>
+    </div>
+</div>
 <script src="/dll/vendor.4092ca4ff034abb69c25.js"></script>
-<script type="text/javascript" src="/runtime.d7c8022f754ae6ea0563.js"></script><script type="text/javascript" src="/app.e301627030c568ad0c70.js"></script></body>
+<script type="text/javascript" src="/runtime.dd4972db5729f8084d27.js"></script><script type="text/javascript" src="/app.e301627030c568ad0c70.js"></script></body>
 </html>

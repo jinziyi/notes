@@ -2499,14 +2499,14 @@ input {
 
 .fade-enter.fade-enter-active {
   opacity: 1;
-  transition: opacity 300ms ease-out; }
+  transition: opacity 500ms ease-in; }
 
 .fade-leave {
   opacity: 1; }
 
 .fade-leave.fade-leave-active {
-  opacity: 0;
-  transition: opacity 100ms ease-out; }
+  opacity: 0.01;
+  transition: opacity 300ms ease-in; }
 
 .c-toast-root {
   position: fixed;
@@ -2534,8 +2534,8 @@ input {
 
 .c-toast-root .text {
   padding-top: 0.36rem;
-  font-size: 6.4px;
-  font-size: .4rem;
+  font-size: 4.8px;
+  font-size: .3rem;
   text-align: center; }
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -2701,14 +2701,14 @@ input {
 
 .fade-enter.fade-enter-active {
   opacity: 1;
-  transition: opacity 300ms ease-out; }
+  transition: opacity 500ms ease-in; }
 
 .fade-leave {
   opacity: 1; }
 
 .fade-leave.fade-leave-active {
-  opacity: 0;
-  transition: opacity 100ms ease-out; }
+  opacity: 0.01;
+  transition: opacity 300ms ease-in; }
 
 .app-root {
   width: 100%;
@@ -2896,14 +2896,14 @@ input {
 
 .fade-enter.fade-enter-active {
   opacity: 1;
-  transition: opacity 300ms ease-out; }
+  transition: opacity 500ms ease-in; }
 
 .fade-leave {
   opacity: 1; }
 
 .fade-leave.fade-leave-active {
-  opacity: 0;
-  transition: opacity 100ms ease-out; }
+  opacity: 0.01;
+  transition: opacity 300ms ease-in; }
 
 .c-footer-root {
   width: 100%;
@@ -3102,14 +3102,14 @@ input {
 
 .fade-enter.fade-enter-active {
   opacity: 1;
-  transition: opacity 300ms ease-out; }
+  transition: opacity 500ms ease-in; }
 
 .fade-leave {
   opacity: 1; }
 
 .fade-leave.fade-leave-active {
-  opacity: 0;
-  transition: opacity 100ms ease-out; }
+  opacity: 0.01;
+  transition: opacity 300ms ease-in; }
 
 .c-data-item-root {
   width: 100%;
@@ -3329,11 +3329,11 @@ input {
 
 .fade-enter.fade-enter-active {
   opacity: 1;
-  transition: opacity 300ms ease-out; }
+  transition: opacity 500ms ease-in; }
 
 .fade-leave {
   opacity: 1; }
 
 .fade-leave.fade-leave-active {
-  opacity: 0;
-  transition: opacity 100ms ease-out; }
+  opacity: 0.01;
+  transition: opacity 300ms ease-in; }

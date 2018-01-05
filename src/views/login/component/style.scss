@@ -3,9 +3,11 @@
 .v-login-root {
 	height: 100%;
 	@include flex(column);
+	justify-content: flex-start;
+	padding-top: 3rem;
 	.logo{
 		position: relative;
-		top: -1rem;
+		top: -.5rem;
 	}
 	.info-box{
 		width: 100%;

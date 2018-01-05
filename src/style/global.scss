@@ -112,14 +112,13 @@ input{
 	height: 100%;
 }
 
-// transition-fade
 .fade-enter {
 	opacity: 0.01;
 }
 
 .fade-enter.fade-enter-active {
 	opacity: 1;
-	transition: opacity 300ms ease-out;
+	transition: opacity 500ms ease-in;
 }
 
 .fade-leave {
@@ -127,6 +126,6 @@ input{
 }
 
 .fade-leave.fade-leave-active {
-	opacity: 0;
-	transition: opacity 100ms ease-out;
+	opacity: 0.01;
+	transition: opacity 300ms ease-in;
 }

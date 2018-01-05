@@ -1,0 +1,26 @@
+{
+  "short_name": "Notes",
+  "name": "一个简洁的笔记本应用",
+  "icons": [
+    {
+      "src": "./images/snow-48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "./images/snow-96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "./images/snow-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "orientation": "portrait",
+  "display": "standalone",
+  "background_color": "#3478f6",
+  "theme_color": "#2196F3",
+  "start_url": "index.html?launcher=homescreen"
+}

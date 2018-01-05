@@ -71,7 +71,7 @@ export default class Item extends PureComponent {
 					</div>
 					{
 						isCreate ? null : <div className="favour">
-							<i onClick={e => submitChange({favour: !values.favour})}
+							<i onClick={e => submitChange({favour: !values.favour}) && !values.favour && showToast({text: '收藏成功'})}
 							   className={`fa fa-heart${values['favour'] ? '' : '-o'}`}/>
 						</div>
 					}
