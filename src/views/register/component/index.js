@@ -21,6 +21,9 @@ export default class Register extends Component {
 		}
 		return (
 			<div className="v-register-root">
+				<div>
+					<i className="logo fa fa-snowflake-o"/>
+				</div>
 				<div className="info-box">
 					<input type="text" value={account}
 						   maxLength={16}

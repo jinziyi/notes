@@ -5,6 +5,9 @@ const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
+const getIP = require('../src/utils/getIPAddress');
+const localIP = process.argv.findIndex(e => e === 'IP') > 0;
+const host = localIP ? getIP() : 'localhost';
 
 module.exports = merge(common, {
 	// devtool: 'eval-source-map',
@@ -22,6 +25,7 @@ module.exports = merge(common, {
 		contentBase: path.resolve(__dirname, '../dist'),
 		historyApiFallback: true,
 		hot: true,
+		host,
 		port: 3000,
 		clientLogLevel: 'info',
 		compress: true,

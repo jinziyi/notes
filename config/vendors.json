@@ -7,5 +7,6 @@
   "redux",
   "react-redux",
   "react-router-redux",
-  "redux-thunk"
+  "redux-thunk",
+  "react-router-transition"
 ]

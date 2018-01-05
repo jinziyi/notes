@@ -88,3 +88,45 @@ input{
 	bottom: 10%;
 	font-size: .8rem;
 }
+
+.logo{
+	font-size: 1.5rem;
+	animation: logo linear 16s infinite;
+	@keyframes logo {
+		0%{
+			transform: rotate(0);
+			color: #000;
+		}
+		50%{
+			transform: rotate(180deg);
+			color: #fff;
+		}
+		100%{
+			transform: rotate(360deg);
+			color: #000;
+		}
+	}
+}
+
+.height-100{
+	height: 100%;
+}
+
+// transition-fade
+.fade-enter {
+	opacity: 0.01;
+}
+
+.fade-enter.fade-enter-active {
+	opacity: 1;
+	transition: opacity 300ms ease-out;
+}
+
+.fade-leave {
+	opacity: 1;
+}
+
+.fade-leave.fade-leave-active {
+	opacity: 0;
+	transition: opacity 100ms ease-out;
+}

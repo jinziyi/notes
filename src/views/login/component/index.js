@@ -20,6 +20,9 @@ export default class Login extends Component {
 		}
 		return (
 			<div className="v-login-root">
+				<div>
+					<i className="logo fa fa-snowflake-o"/>
+				</div>
 				<div className="info-box">
 					<input type="text" value={account}
 						   maxLength={16}

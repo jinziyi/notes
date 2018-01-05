@@ -9,10 +9,12 @@ import {
 	Route,
 	Link
 } from 'react-router-dom';
+import {AnimatedSwitch} from 'react-router-transition';
+import {bounceTransition, mapStyles} from 'constants/animateConfig';
 import wrapWithRedux from '../redux';
 import ToastSeed from 'components/Toast';
 import {connectToast} from 'actions/toast';
-import routes from '../constants/routes';
+import routes from 'constants/routes';
 import './style.scss';
 import Home from '../views/home';
 import Register from '../views/register/route';
@@ -29,16 +31,22 @@ class App extends PureComponent {
 		return (
 			<Router>
 				<div className="app-root">
-					<Switch>
+					<AnimatedSwitch
+						atEnter={bounceTransition.atEnter}
+						atLeave={bounceTransition.atLeave}
+						atActive={bounceTransition.atActive}
+						mapStyles={mapStyles}
+						className="route-wrapper"
+					>
 						<Route exact path={routes.home} component={Home}/>
 						<Route exact path={routes.favour} component={Favour}/>
 						<Route exact path={routes.item} component={Item}/>
 						<Route exact path={routes.create} component={Item}/>
 						<Route exact path={routes.register} component={Register}/>
-						<Route exact path={routes.login} component={Login}/>
+						<Route key="das" exact location={location} path={routes.login} component={Login}/>
 						<Route exact path={routes.setting} component={Setting}/>
 						<Route component={NoMatch}/>
-					</Switch>
+					</AnimatedSwitch>
 					<Toast/>
 				</div>
 			</Router>
