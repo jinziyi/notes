@@ -16,11 +16,16 @@
       "src": "./images/snow-192.png",
       "type": "image/png",
       "sizes": "192x192"
+    },
+    {
+      "src": "./images/snow-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ],
   "orientation": "portrait",
   "display": "standalone",
   "background_color": "#3478f6",
   "theme_color": "#2196F3",
-  "start_url": "index.html?launcher=homescreen"
+  "start_url": "/?launcher=homescreen"
 }
