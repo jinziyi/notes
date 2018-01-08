@@ -1,0 +1,216 @@
+[2017-12-06 15:34:52.160] [ERROR] errorLogger - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /api/users/getUser
+request client ip:  ::1
+request query:  {}
+response time: 2
+err name: userNotExist
+err message: 用户不存在
+err stack: userNotExist: 用户不存在
+    at exports.getUser (/Users/cjy/Documents/code/test/HelloKoa2/app/controllers/user_controller.js:12:9)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at allowedMethods (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:406:12)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:350:31)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/middlewares/response_formatter.js:29:10
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at app.use (/Users/cjy/Documents/code/test/HelloKoa2/app.js:40:15)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+*************** error log end ***************
+
+[2017-12-06 15:40:55.356] [ERROR] errorLogger - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /api/users/getUser
+request client ip:  ::1
+request query:  {}
+response time: 6
+err name: userNotExist
+err message: 用户不存在
+err stack: userNotExist: 用户不存在
+    at exports.getUser (/Users/cjy/Documents/code/test/HelloKoa2/app/controllers/user_controller.js:12:9)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at allowedMethods (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:406:12)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:350:31)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/middlewares/response_formatter.js:29:10
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at app.use (/Users/cjy/Documents/code/test/HelloKoa2/app.js:40:15)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+*************** error log end ***************
+
+[2017-12-06 15:41:47.817] [ERROR] errorLogger - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /api/users/1
+request client ip:  ::1
+request query:  {}
+response time: 2
+err name: userNotExist
+err message: 用户不存在
+err stack: userNotExist: 用户不存在
+    at exports.getUser (/Users/cjy/Documents/code/test/HelloKoa2/app/controllers/user_controller.js:12:9)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at allowedMethods (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:406:12)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:350:31)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/middlewares/response_formatter.js:29:10
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at app.use (/Users/cjy/Documents/code/test/HelloKoa2/app.js:40:15)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+*************** error log end ***************
+
+[2017-12-06 15:42:20.906] [ERROR] errorLogger - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /api/users/1
+request client ip:  ::1
+request query:  {}
+response time: 22
+err name: userNotExist
+err message: 用户不存在
+err stack: userNotExist: 用户不存在
+    at exports.getUser (/Users/cjy/Documents/code/test/HelloKoa2/app/controllers/user_controller.js:13:9)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at allowedMethods (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:406:12)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:350:31)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/middlewares/response_formatter.js:29:10
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at app.use (/Users/cjy/Documents/code/test/HelloKoa2/app.js:40:15)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+*************** error log end ***************
+
+[2017-12-06 15:43:25.612] [ERROR] errorLogger - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /api/users/1
+request client ip:  ::1
+request query:  {}
+response time: 77
+err name: userNotExist
+err message: 用户不存在
+err stack: userNotExist: 用户不存在
+    at exports.getUser (/Users/cjy/Documents/code/test/HelloKoa2/app/controllers/user_controller.js:13:9)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at allowedMethods (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:406:12)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:350:31)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/middlewares/response_formatter.js:29:10
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at app.use (/Users/cjy/Documents/code/test/HelloKoa2/app.js:40:15)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+*************** error log end ***************
+
+[2017-12-06 15:44:15.890] [ERROR] errorLogger - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /api/users/1
+request client ip:  ::1
+request query:  {}
+response time: 21
+err name: userNotExist
+err message: 用户不存在
+err stack: userNotExist: 用户不存在
+    at exports.getUser (/Users/cjy/Documents/code/test/HelloKoa2/app/controllers/user_controller.js:13:9)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at allowedMethods (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:406:12)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:350:31)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/middlewares/response_formatter.js:29:10
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at app.use (/Users/cjy/Documents/code/test/HelloKoa2/app.js:40:15)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+*************** error log end ***************
+
+[2017-12-06 15:44:34.800] [ERROR] errorLogger - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /api/users/1
+request client ip:  ::1
+request query:  {}
+response time: 9
+err name: userNotExist
+err message: 用户不存在
+err stack: userNotExist: 用户不存在
+    at exports.getUser (/Users/cjy/Documents/code/test/HelloKoa2/app/controllers/user_controller.js:13:9)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at allowedMethods (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:406:12)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:350:31)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/middlewares/response_formatter.js:29:10
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at app.use (/Users/cjy/Documents/code/test/HelloKoa2/app.js:40:15)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+*************** error log end ***************
+
+[2017-12-06 15:48:44.560] [ERROR] errorLogger - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /api/users
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 2
+err name: userNotExist
+err message: 用户不存在
+err stack: userNotExist: 用户不存在
+    at exports.getUser (/Users/cjy/Documents/code/test/HelloKoa2/app/controllers/user_controller.js:13:9)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at allowedMethods (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:406:12)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:350:31)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/middlewares/response_formatter.js:29:10
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at app.use (/Users/cjy/Documents/code/test/HelloKoa2/app.js:40:15)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+*************** error log end ***************
+

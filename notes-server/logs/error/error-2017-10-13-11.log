@@ -1,0 +1,405 @@
+[2017-10-13 11:00:03.853] [ERROR] errorLogger - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /api/users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 1
+err name: undefined
+err message: undefined
+err stack: Error
+    at exports.getUser (/Users/cjy/Documents/code/test/HelloKoa2/app/controllers/user_controller.js:12:9)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at allowedMethods (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:406:12)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:350:31)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/middlewares/response_formatter.js:30:10
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at app.use (/Users/cjy/Documents/code/test/HelloKoa2/app.js:40:15)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+*************** error log end ***************
+
+[2017-10-13 11:01:54.017] [ERROR] errorLogger - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /api/users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 24
+err name: undefined
+err message: undefined
+err stack: Error
+    at exports.getUser (/Users/cjy/Documents/code/test/HelloKoa2/app/controllers/user_controller.js:12:9)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at allowedMethods (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:406:12)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:350:31)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/middlewares/response_formatter.js:29:10
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at app.use (/Users/cjy/Documents/code/test/HelloKoa2/app.js:40:15)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+*************** error log end ***************
+
+[2017-10-13 11:02:00.171] [ERROR] errorLogger - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /api/users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 1
+err name: undefined
+err message: undefined
+err stack: Error
+    at exports.getUser (/Users/cjy/Documents/code/test/HelloKoa2/app/controllers/user_controller.js:12:9)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at allowedMethods (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:406:12)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:350:31)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/middlewares/response_formatter.js:29:10
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at app.use (/Users/cjy/Documents/code/test/HelloKoa2/app.js:40:15)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+*************** error log end ***************
+
+[2017-10-13 11:03:24.780] [ERROR] errorLogger - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /api/users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 15
+err name: undefined
+err message: undefined
+err stack: Error
+    at exports.getUser (/Users/cjy/Documents/code/test/HelloKoa2/app/controllers/user_controller.js:12:9)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at allowedMethods (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:406:12)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:350:31)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/middlewares/response_formatter.js:29:10
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at app.use (/Users/cjy/Documents/code/test/HelloKoa2/app.js:40:15)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+*************** error log end ***************
+
+[2017-10-13 11:03:52.829] [ERROR] errorLogger - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /api/users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 18
+err name: undefined
+err message: undefined
+err stack: Error
+    at exports.getUser (/Users/cjy/Documents/code/test/HelloKoa2/app/controllers/user_controller.js:12:9)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at allowedMethods (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:406:12)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:350:31)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/middlewares/response_formatter.js:29:10
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at app.use (/Users/cjy/Documents/code/test/HelloKoa2/app.js:40:15)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+*************** error log end ***************
+
+[2017-10-13 11:04:18.519] [ERROR] errorLogger - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /api/users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 9
+err name: undefined
+err message: undefined
+err stack: Error
+    at exports.getUser (/Users/cjy/Documents/code/test/HelloKoa2/app/controllers/user_controller.js:12:9)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at allowedMethods (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:406:12)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:350:31)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/middlewares/response_formatter.js:29:10
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at app.use (/Users/cjy/Documents/code/test/HelloKoa2/app.js:40:15)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+*************** error log end ***************
+
+[2017-10-13 11:04:45.030] [ERROR] errorLogger - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /api/users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 13
+err name: undefined
+err message: undefined
+err stack: Error
+    at exports.getUser (/Users/cjy/Documents/code/test/HelloKoa2/app/controllers/user_controller.js:12:9)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at allowedMethods (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:406:12)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:350:31)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/middlewares/response_formatter.js:29:10
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at app.use (/Users/cjy/Documents/code/test/HelloKoa2/app.js:40:15)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+*************** error log end ***************
+
+[2017-10-13 11:05:02.210] [ERROR] errorLogger - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /api/users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 8
+err name: undefined
+err message: undefined
+err stack: Error
+    at exports.getUser (/Users/cjy/Documents/code/test/HelloKoa2/app/controllers/user_controller.js:12:9)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at allowedMethods (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:406:12)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:350:31)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/middlewares/response_formatter.js:29:10
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at app.use (/Users/cjy/Documents/code/test/HelloKoa2/app.js:40:15)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+*************** error log end ***************
+
+[2017-10-13 11:05:49.608] [ERROR] errorLogger - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /api/users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 23
+err name: undefined
+err message: undefined
+err stack: Error
+    at exports.getUser (/Users/cjy/Documents/code/test/HelloKoa2/app/controllers/user_controller.js:12:9)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at allowedMethods (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:406:12)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:350:31)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/middlewares/response_formatter.js:29:10
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at app.use (/Users/cjy/Documents/code/test/HelloKoa2/app.js:40:15)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+*************** error log end ***************
+
+[2017-10-13 11:06:05.514] [ERROR] errorLogger - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /api/users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 16
+err name: undefined
+err message: undefined
+err stack: Error
+    at exports.getUser (/Users/cjy/Documents/code/test/HelloKoa2/app/controllers/user_controller.js:12:9)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at allowedMethods (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:406:12)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:350:31)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/middlewares/response_formatter.js:29:10
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at app.use (/Users/cjy/Documents/code/test/HelloKoa2/app.js:40:15)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+*************** error log end ***************
+
+[2017-10-13 11:06:19.993] [ERROR] errorLogger - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /api/users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 23
+err name: undefined
+err message: undefined
+err stack: Error
+    at exports.getUser (/Users/cjy/Documents/code/test/HelloKoa2/app/controllers/user_controller.js:12:9)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at allowedMethods (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:406:12)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:350:31)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/middlewares/response_formatter.js:29:10
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at app.use (/Users/cjy/Documents/code/test/HelloKoa2/app.js:40:15)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+*************** error log end ***************
+
+[2017-10-13 11:08:28.604] [ERROR] errorLogger - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /api/users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 18
+err name: undefined
+err message: undefined
+err stack: Error
+    at exports.getUser (/Users/cjy/Documents/code/test/HelloKoa2/app/controllers/user_controller.js:12:9)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at allowedMethods (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:406:12)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:350:31)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/middlewares/response_formatter.js:29:10
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at app.use (/Users/cjy/Documents/code/test/HelloKoa2/app.js:40:15)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+*************** error log end ***************
+
+[2017-10-13 11:08:46.008] [ERROR] errorLogger - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /api/users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 18
+err name: undefined
+err message: undefined
+err stack: Error
+    at exports.getUser (/Users/cjy/Documents/code/test/HelloKoa2/app/controllers/user_controller.js:12:9)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at allowedMethods (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:406:12)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:350:31)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/middlewares/response_formatter.js:29:10
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at app.use (/Users/cjy/Documents/code/test/HelloKoa2/app.js:40:15)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+*************** error log end ***************
+
+[2017-10-13 11:09:21.711] [ERROR] errorLogger - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /api/users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 11
+err name: userNotExist
+err message: 用户不存在
+err stack: userNotExist: 用户不存在
+    at exports.getUser (/Users/cjy/Documents/code/test/HelloKoa2/app/controllers/user_controller.js:12:9)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at allowedMethods (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:406:12)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:350:31)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/middlewares/response_formatter.js:29:10
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at app.use (/Users/cjy/Documents/code/test/HelloKoa2/app.js:40:15)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+*************** error log end ***************
+
+[2017-10-13 11:09:34.858] [ERROR] errorLogger - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /api/users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 14
+err name: userNotExist
+err message: 用户不存在
+err stack: userNotExist: 用户不存在
+    at exports.getUser (/Users/cjy/Documents/code/test/HelloKoa2/app/controllers/user_controller.js:12:9)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at allowedMethods (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:406:12)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:345:16
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/node_modules/koa-compose/index.js:44:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-router/lib/router.js:350:31)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at /Users/cjy/Documents/code/test/HelloKoa2/middlewares/response_formatter.js:29:10
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at app.use (/Users/cjy/Documents/code/test/HelloKoa2/app.js:40:15)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+    at dispatch (/Users/cjy/Documents/code/test/HelloKoa2/node_modules/koa-compose/index.js:42:32)
+*************** error log end ***************
+
