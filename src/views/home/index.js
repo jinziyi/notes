@@ -9,7 +9,7 @@ import routes, {getRoute} from 'constants/routes';
 
 const mapStateToProps = (state, props) => {
 	return {
-		isLogin: state.login,
+		isLogin: state.login.isLogin,
 		items: state.items.map(item => ({
 			...item,
 			link: getRoute('item', {itemId: item.id})

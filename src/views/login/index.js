@@ -9,7 +9,7 @@ import {show} from 'actions/toast'
 
 const mapStateToProps = (state) => {
 	return {
-		isLogin: state.login
+		isLogin: state.login.isLogin
 	}
 }
 

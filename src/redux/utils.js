@@ -12,7 +12,7 @@ export const createReducer = (initialState, handlers) => (state = initialState, 
     }
 };
 
-export const mergeAction = (...actions) => actions.map(s => s.toUpperCase()).join('_');
+export const mergeAction = (...actions) => actions.filter(e => e).map(s => s.toUpperCase()).join('_');
 
 export const createActionCreator = pre => action => ({
     ...action,

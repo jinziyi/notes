@@ -8,7 +8,7 @@ import {logout} from 'actions/login'
 
 const mapStateToProps = (state) => {
 	return {
-		isLogin: state.login,
+		isLogin: state.login.isLogin,
 	}
 }
 

@@ -13,8 +13,9 @@ export default class Login extends Component {
 	}
 
 	render() {
-		const {isLogin, login, toast} = this.props;
+		const {isLogin} = this.props;
 		const {password, account} = this.state;
+		console.log(isLogin)
 		if (isLogin === true) {
 			return <Redirect to={'/'}/>
 		}
@@ -33,13 +34,19 @@ export default class Login extends Component {
 					<Link to={routes.register} className="primary to-register">注册账号</Link>
 				</div>
 				<div className="button-box">
-					<div onClick={e => login({
-						password, cb: isLogin => !isLogin ?
-							toast({text: '密码错误', toastType: 'error'}) : ''
-					})} className="btn">登陆
+					<div onClick={::this.loginHandler} className="btn">登陆
 					</div>
 				</div>
 			</div>
 		)
+	}
+
+	loginHandler() {
+		const {toast, login} = this.props;
+		const {account, password} = this.state;
+		if (!account.trim() || !password.trim()) {
+			return toast({text: '请输入完整信息', toastType: 'warning'})
+		}
+		login(account, password, res => res.code != 0 && toast({text: res.message, toastType: 'warning'}))
 	}
 }

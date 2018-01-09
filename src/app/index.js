@@ -13,6 +13,7 @@ import {AnimatedSwitch} from 'react-router-transition';
 import {bounceTransition, mapStyles} from 'constants/animateConfig';
 import wrapWithRedux from '../redux';
 import ToastSeed from 'components/Toast';
+import Init from './Init';
 import {connectToast} from 'actions/toast';
 import routes from 'constants/routes';
 import './style.scss';
@@ -47,6 +48,7 @@ class App extends PureComponent {
 						<Route exact path={routes.setting} component={Setting}/>
 						<Route component={NoMatch}/>
 					</AnimatedSwitch>
+					<Init/>
 					<Toast/>
 				</div>
 			</Router>

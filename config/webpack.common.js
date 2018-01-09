@@ -92,6 +92,7 @@ module.exports = {
 			'containers': __dirname + '/../src/containers',
 			'constants': __dirname + '/../src/constants',
 			'actions': __dirname + '/../src/redux/reducers',
+			'utils': __dirname + '/../src/utils',
 		}
 	}
 };

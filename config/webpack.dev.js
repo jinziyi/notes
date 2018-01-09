@@ -23,6 +23,9 @@ module.exports = merge(common, {
 		historyApiFallback: true,
 		hot: true,
 		host: '0.0.0.0',
+		proxy: {
+			"/api": "http://localhost:3001"
+		},
 		port: 3000,
 		clientLogLevel: 'info',
 		compress: true,

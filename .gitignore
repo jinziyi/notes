@@ -1,6 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
 .idea
 node_modules
-notes-server/node_modules/
 notes-server/public/images/
 notes-server/public/javascripts/
+notes-server/logs

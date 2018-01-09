@@ -34,20 +34,22 @@ const query = function (sql, values) {
 
 const users = `create table if not exists users(
  id INT NOT NULL AUTO_INCREMENT,
- UNIQUE name VARCHAR(100) NOT NULL,
- pass VARCHAR(40) NOT NULL,
+ username VARCHAR(100) NOT NULL UNIQUE,
+ password VARCHAR(40) NOT NULL,
+ create_time TIMESTAMP NOT NULL,
  PRIMARY KEY ( id )
-);`
+)`
 
 const notes = `create table if not exists notes(
  id INT NOT NULL AUTO_INCREMENT,
  name VARCHAR(100) NOT NULL,
  password VARCHAR(40) NOT NULL,
- desc VARCHAR(100) NOT NULL,
+ description VARCHAR(100) NOT NULL,
  favour INT NOT NULL DEFAULT 0,
- uid  VARCHAR(40) NOT NULL,
+ uid VARCHAR(40) NOT NULL,
+ create_time TIMESTAMP NOT NULL,
  PRIMARY KEY ( id )
-);`
+)`
 
 const createTable = function( sql ) {
 	return query( sql, [] )

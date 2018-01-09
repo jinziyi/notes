@@ -4,12 +4,12 @@
 const {query} = require('./index');
 
 const addUser = (value) => {
-	const sql = 'insert into users (name, pass) values(?, ?)';
+	const sql = 'insert into users (username, password) values(?, ?)';
 	return query(sql, value);
 }
 
 const getUser = (name) => {
-	const sql = `select * from users where name=${name}`;
+	const sql = `select * from users where username='${name}'`;
 	return query(sql);
 }
 
