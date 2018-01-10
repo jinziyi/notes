@@ -45,7 +45,7 @@ export default class Register extends Component {
 	}
 
 	register() {
-		const {toast, register} = this.props;
+		const {toast, register, history} = this.props;
 		const {password, password1, account} = this.state;
 		if (!account) {
 			return toast({text: '请输入账号', toastType: 'error'});
@@ -53,6 +53,11 @@ export default class Register extends Component {
 		if (!password || password !== password1) {
 			return toast({text: '两次密码不一致', toastType: 'error'});
 		}
-		register({password1, password, account})
+		register({username: account, password, password1}, res => {
+			if(res.code == 0){
+				return history.push('/')
+			}
+			toast({text: res.message, toastType: 'error'});
+		})
 	}
 }

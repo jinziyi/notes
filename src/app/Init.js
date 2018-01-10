@@ -3,14 +3,15 @@
  */
 import React, {PureComponent} from 'react';
 import {connect} from 'react-redux';
-import {getUserInfo} from 'actions/login'
+import {getUserInfo} from 'actions/login';
+import {getItem} from 'actions/items';
 
 class Init extends PureComponent {
-	componentDidMount(){
-		if(!this.props.isLogin){
-			this.props.getUserInfo();
-		}
+	componentDidMount() {
+		this.props.getUserInfo();
+		this.props.getItem();
 	}
+
 	render() {
 		return (
 			<div/>
@@ -25,7 +26,8 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = {
-	getUserInfo
+	getUserInfo,
+	getItem
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Init);

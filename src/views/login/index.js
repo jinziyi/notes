@@ -5,6 +5,7 @@ import React, {PureComponent} from 'react';
 import {connect} from 'react-redux';
 import Component from './component';
 import {login} from 'actions/login'
+import {getItem} from 'actions/items'
 import {show} from 'actions/toast'
 
 const mapStateToProps = (state) => {
@@ -16,6 +17,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = {
 	login,
 	toast: show,
+	getItem,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Component);

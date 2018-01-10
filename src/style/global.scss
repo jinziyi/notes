@@ -95,7 +95,7 @@ input{
 	@keyframes logo {
 		0%{
 			transform: rotate(0);
-			color: #000;
+			color: $primary-color;
 		}
 		50%{
 			transform: rotate(180deg);
@@ -103,7 +103,7 @@ input{
 		}
 		100%{
 			transform: rotate(360deg);
-			color: #000;
+			color: $primary-color;
 		}
 	}
 }

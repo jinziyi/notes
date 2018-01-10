@@ -7,9 +7,7 @@ export default ({dispatch, getState}) => {
 		const {
 			types,
 			callAPI,
-			fns = [() => true, () => {
-			}, () => {
-			}],   //fns可以不传
+			fns = [],   //fns可以不传
 			payload = {}
 		} = action;
 
@@ -29,7 +27,7 @@ export default ({dispatch, getState}) => {
 		}
 
 		const [requestType, successType, failureType] = types;
-		const [requestFn, successFn, failureFn] = fns;
+		const [requestFn = e => true, successFn = e => e, failureFn = e => e] = fns;
 
 		if (!requestFn(getState())) {
 			return

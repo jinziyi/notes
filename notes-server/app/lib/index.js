@@ -42,6 +42,7 @@ const users = `create table if not exists users(
 
 const notes = `create table if not exists notes(
  id INT NOT NULL AUTO_INCREMENT,
+ title VARCHAR(100) NOT NULL,
  name VARCHAR(100) NOT NULL,
  password VARCHAR(40) NOT NULL,
  description VARCHAR(100) NOT NULL,

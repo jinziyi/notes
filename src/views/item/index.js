@@ -9,7 +9,7 @@ import {show, hide} from 'actions/toast';
 const mapStateToProps = (state, props) => {
 	return {
 		isLogin: state.login.isLogin,
-		values: state.items.find(item => item.id === props.match.params.itemId)
+		values: state.items.find(item => item.id == props.match.params.itemId)
 	}
 }
 

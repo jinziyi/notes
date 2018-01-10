@@ -3,8 +3,10 @@ const path = require('path');
 const fs = require('fs');
 const Koa = require('koa')
 const app = new Koa()
+const compress = require('koa-compress')
 const views = require('koa-views')
 const json = require('koa-json')
+const serve = require('koa-static');
 const onerror = require('koa-onerror')
 const bodyparser = require('koa-bodyparser')
 const logger = require('koa-logger')
@@ -12,17 +14,20 @@ const router = require('koa-router')()
 const session = require('koa-session-minimal');
 const MysqlStore = require('koa-mysql-session');
 const index = require('./routes/index')
-
+const distPath = '/../dist';
 // error handler
 onerror(app)
 
 // middlewares
+const main = serve(path.join(__dirname, distPath), {maxage: 7 * 24 * 60 * 60});
+app.use(compress())
+app.use(main)
 app.use(bodyparser({
 	enableTypes: ['json', 'form', 'text']
 }))
 app.use(json())
 app.use(logger())
-app.use(require('koa-static')(__dirname + '/../dist'))
+app.use(require('koa-static')(__dirname + distPath))
 
 app.use(views(__dirname + '/views'))
 

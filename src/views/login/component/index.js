@@ -15,7 +15,6 @@ export default class Login extends Component {
 	render() {
 		const {isLogin} = this.props;
 		const {password, account} = this.state;
-		console.log(isLogin)
 		if (isLogin === true) {
 			return <Redirect to={'/'}/>
 		}
@@ -42,11 +41,17 @@ export default class Login extends Component {
 	}
 
 	loginHandler() {
-		const {toast, login} = this.props;
+		const {toast, login, getItem} = this.props;
 		const {account, password} = this.state;
 		if (!account.trim() || !password.trim()) {
 			return toast({text: '请输入完整信息', toastType: 'warning'})
 		}
-		login(account, password, res => res.code != 0 && toast({text: res.message, toastType: 'warning'}))
+		login(account, password, res => {
+			if (res.code != 0) {
+				toast({text: res.message, toastType: 'warning'})
+			} else {
+				getItem()
+			}
+		})
 	}
 }

@@ -44,7 +44,7 @@ export default class Item extends PureComponent {
 			placeholder: '请输入密码',
 		},
 		{
-			key: 'desc',
+			key: 'description',
 			label: '描述',
 			placeholder: '请输入描述',
 		},
@@ -59,7 +59,7 @@ export default class Item extends PureComponent {
 		const updateValue = (key, value) => this.setState(({form}) => ({form: {...form, [key]: value}}));
 		const itemId = match.params.itemId;
 		const isCreate = match.url === routes.create;
-		const submitChange = (data) => updateItem(itemId, data);
+		const submitChange = (data) => updateItem({id: itemId, ...data});
 		return (
 			<div className="v-item-root">
 				<div className="main">
@@ -71,7 +71,7 @@ export default class Item extends PureComponent {
 					</div>
 					{
 						isCreate ? null : <div className="favour">
-							<i onClick={e => submitChange({favour: !values.favour}) && !values.favour && showToast({text: '收藏成功'})}
+							<i onClick={e => submitChange({favour: Number(!values.favour)}) && !values.favour && showToast({text: '收藏成功'})}
 							   className={`fa fa-heart${values['favour'] ? '' : '-o'}`}/>
 						</div>
 					}

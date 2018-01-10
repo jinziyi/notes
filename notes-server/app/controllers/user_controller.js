@@ -9,7 +9,6 @@ const {addUser, getUser} = require('../lib/users');
 //获取用户
 exports.getUser = async (ctx, next) => {
 	//如果id != 1抛出API 异常
-	console.log(ctx.session)
 	if (ctx.session && ctx.session.username) {
 		const username = ctx.session.username;
 		return await getUser(username).then(result => {
@@ -28,7 +27,7 @@ exports.getUser = async (ctx, next) => {
 				messge: err
 			}
 		});
-	}else {
+	} else {
 		return ctx.body = {
 			code: 1000,
 			message: '未登陆',
@@ -71,14 +70,22 @@ exports.loginUser = async (ctx, next) => {
 exports.logoutUser = async (ctx, next) => {
 	//如果id != 1抛出API 异常
 	ctx.session = null;
-	return ctx.redirect('/login')
+	return ctx.body = {
+		code: 0,
+		message: '退出成功'
+	}
 }
 
 //用户注册
 exports.registerUser = async (ctx, next) => {
-	const {username, password} = ctx.request.query
+	const {username, password, password1} = ctx.request.body;
+	if (!username || !password1 || password1 !== password) {
+		return ctx.body = {
+			code: 1000,
+			message: '参数错误'
+		}
+	}
 	await getUser(username).then(async result => {
-		console.log(result)
 		if (result.length) {
 			ctx.body = {
 				code: 1001,
@@ -87,9 +94,16 @@ exports.registerUser = async (ctx, next) => {
 			return
 		}
 		await addUser([username, md5(password)]).then(result => {
+			const res = JSON.parse(JSON.stringify(result));
+			ctx.session.username = username;
+			ctx.session.id = res.insertId;
 			ctx.body = {
 				code: 0,
 				message: '注册成功',
+				data: {
+					isLogin: true,
+					username
+				}
 			}
 		})
 	}).catch(err => {

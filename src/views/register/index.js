@@ -4,7 +4,7 @@
 import React, {PureComponent} from 'react';
 import {connect} from 'react-redux';
 import Component from './component';
-import {login} from 'actions/login'
+import {register} from 'actions/login'
 import {show} from 'actions/toast'
 
 const mapStateToProps = (state) => {
@@ -14,7 +14,7 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = {
-	register: login,
+	register: register,
 	toast: show,
 }
 
