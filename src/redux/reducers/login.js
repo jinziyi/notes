@@ -72,7 +72,7 @@ export const reducers = {
 		if (data.res.code == 0) {
 			return {
 				isLogin: true,
-				username: data.res.username
+				username: data.res.data.username
 			}
 		}
 		return {

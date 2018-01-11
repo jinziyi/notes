@@ -18,9 +18,12 @@ export default class Setting extends PureComponent {
 
 	render() {
 		const {settings, props} = this;
-		const {logout} = props;
+		const {logout, username} = props;
 		return (
 			<div className="v-setting-root">
+				<div className="welcome">
+					Hi! <span className="username">{username}</span>
+				</div>
 				<div className="body scroll">
 					{settings.map((set) => (
 						<Item {...this.props} {...set}/>
