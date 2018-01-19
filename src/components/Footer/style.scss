@@ -1,4 +1,4 @@
-@import "../../style/index";
+@import "../../style/vars";
 
 .c-footer-root {
 	width: 100%;
@@ -10,7 +10,7 @@
 	.nav-item {
 		@include flex(column);
 		color: $icon-default;
-		.icon {
+		.icons {
 			font-size: .42rem;
 			color: $icon-default;
 		}
@@ -20,7 +20,7 @@
 		}
 		&.primary {
 			color: $primary-color;
-			.icon {
+			.icons {
 				color: $primary-color;
 			}
 		}

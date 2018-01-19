@@ -14,7 +14,7 @@ const PropItem = ({label, value, onChange = e => e, placeholder, showViewIcon, t
 			<div className="item-right">
 				<input value={value} onChange={onChange} placeholder={placeholder} type={type}/>
 				{showViewIcon ?
-					<i onClick={toggleView} className={`fa fa-eye${type === 'text' ? ' primary' : '-slash'}`}/> : null
+					<i onClick={toggleView} className={`icon icon-eye${type === 'text' ? ' primary' : '-slash'}`}/> : null
 				}
 			</div>
 		</div>

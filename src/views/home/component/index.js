@@ -18,10 +18,10 @@ export default class Home extends PureComponent {
 				<div className="body scroll">
 					{items.length ? items.map((item) => (
 						<DataItem {...this.props} {...item}/>
-					)) : <div className="center empty">没有数据</div>}
+					)) : <div className="center empty"> 没有数据 </div>}
 				</div>
 				<Link to={getRoute('create')} className="tap-position">
-					<i className="fa fa-plus-square primary"/>
+					<i className="icon icon-plus-square primary"/>
 				</Link>
 				<Footer {...this.props}/>
 			</div>

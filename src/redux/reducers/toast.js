@@ -24,7 +24,7 @@ const initialState = {
 	isShow: false,
 	toastType: 'success',
 	text: '成功',
-	autoClose: 2000,
+	autoClose: 1500,
 };
 
 export const reducers = {

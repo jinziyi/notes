@@ -31,7 +31,7 @@ class Toast extends PureComponent {
 		return (
 			<div className={`c-toast-root ${isShow ? '' : 'hidden'}`}>
 				<div className="icon-box">
-					<i className={`fa fa-${icon}`}/>
+					<i className={`icon icon-${icon}`}/>
 				</div>
 				<div className="text">
 					{text}

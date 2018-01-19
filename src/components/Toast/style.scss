@@ -1,4 +1,4 @@
-@import "../../style/index";
+@import "../../style/vars";
 
 .c-toast-root {
 	position: fixed;
@@ -12,15 +12,23 @@
 	@include flex(column);
 	padding: $padding;
 	z-index: 99;
-	&.hidden{
-		z-index: -1;
+	will-change: transform, opacity;
+	transform: scale(1);
+	opacity: 1;
+	transition: transform ease-in-out .25s, opacity ease-in-out .25s;
+	pointer-events: auto;
+	&.hidden {
+		transition: transform ease-in-out .15s, opacity ease-in-out .15s;
+		transform: scale(1.15);
+		opacity: 0;
+		pointer-events: none;
 	}
-	.icon-box{
-		.fa{
+	.icon-box {
+		.icon {
 			font-size: 1.2rem;
 		}
 	}
-	.text{
+	.text {
 		padding-top: $padding;
 		font-size: .3rem;
 		text-align: center;

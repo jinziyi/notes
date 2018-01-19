@@ -13,7 +13,7 @@ const Item = ({title, link, count, history}) => {
 			</div>
 			<div className="item-right">
 				<div className="count">{count}</div>
-				<div><i className="fa fa-chevron-right"/></div>
+				<div><i className="icon icon-chevron-right"/></div>
 			</div>
 		</div>
 	)

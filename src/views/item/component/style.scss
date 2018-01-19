@@ -12,11 +12,11 @@
 		}
 		.favour {
 			padding: 0 $padding;
-			.fa-heart-o {
+			.icon-heart-o {
 				font-size: .5rem;
 			}
-			.fa-heart {
-				@extend .fa-heart-o;
+			.icon-heart {
+				@extend .icon-heart-o;
 				color: #e73425;
 			}
 		}

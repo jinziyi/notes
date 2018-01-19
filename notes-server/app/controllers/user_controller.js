@@ -57,7 +57,8 @@ exports.loginUser = async (ctx, next) => {
 		ctx.session.id = res.id;
 		ctx.body = {
 			code: 0,
-			message: '登陆成功'
+			message: '登陆成功',
+			data: {username, isLogin: true,}
 		}
 	}).catch(err => {
 		ctx.body = {

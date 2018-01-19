@@ -90,6 +90,7 @@ input{
 }
 
 .logo{
+	display: inline-block;
 	font-size: 1.5rem;
 	animation: logo linear 16s infinite;
 	@keyframes logo {

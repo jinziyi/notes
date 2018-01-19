@@ -34,8 +34,8 @@ const Footer = ({match = {}}) => {
 			{
 				navs.map((nav, i) => (
 					<Link to={nav.link} className={`nav-item ${activeIndex === i ? 'primary' : ''}`}>
-						<div className="icon">
-							<i className={`fa fa-${nav.icon}`}/>
+						<div className="icons">
+							<i className={`icon icon-${nav.icon}`}/>
 						</div>
 						<div className="text">
 							{nav.text}

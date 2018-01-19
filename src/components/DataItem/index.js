@@ -13,8 +13,8 @@ const DataItem = ({title, link, name, history}) => {
 				<div className="name">{name}</div>
 			</div>
 			<div className="item-right">
-				<div><i className="fa fa-info-circle primary"/></div>
-				<div><i className="fa fa-chevron-right"/></div>
+				<div><i className="icon icon-info-circle primary"/></div>
+				<div><i className="icon icon-chevron-right"/></div>
 			</div>
 		</div>
 	)

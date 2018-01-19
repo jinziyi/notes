@@ -1,4 +1,4 @@
-@import "../../style/index";
+@import "../../style/vars";
 
 .c-data-item-root {
 	width: 100%;
@@ -21,11 +21,11 @@
 		.count{
 			padding-right: .54rem;
 		}
-		.fa-info-circle{
+		.icon-info-circle{
 			font-size: .3rem;
 			margin-right: .2rem;
 		}
-		.fa-chevron-right{
+		.icon-chevron-right{
 			color: $icon-default;
 		}
 	}

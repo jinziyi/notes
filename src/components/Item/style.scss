@@ -1,4 +1,4 @@
-@import "../../style/index";
+@import "../../style/vars";
 
 .c-item-root {
 	width: 100%;
@@ -15,7 +15,7 @@
 		.count{
 			padding-right: .54rem;
 		}
-		.fa{
+		.icon{
 			color: $icon-default;
 		}
 	}

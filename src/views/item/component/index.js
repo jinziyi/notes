@@ -72,7 +72,7 @@ export default class Item extends PureComponent {
 					{
 						isCreate ? null : <div className="favour">
 							<i onClick={e => submitChange({favour: Number(!values.favour)}) && !values.favour && showToast({text: '收藏成功'})}
-							   className={`fa fa-heart${values['favour'] ? '' : '-o'}`}/>
+							   className={`icon icon-heart${values['favour'] ? '' : '-o'}`}/>
 						</div>
 					}
 				</div>
@@ -101,7 +101,7 @@ export default class Item extends PureComponent {
 					}
 				</div>
 				<div onClick={history.goBack} className="tap-position">
-					<i className="fa fa-reply primary"/>
+					<i className="icon icon-reply primary"/>
 				</div>
 			</div>
 		)
