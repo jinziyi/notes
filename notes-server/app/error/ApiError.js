@@ -2,7 +2,7 @@
  * Created by cjy on 16/11/23.
  */
 
-const ApiErrorNames = require('./apiErrorNames');
+const ApiErrorNames = require('./ApiErrorNames');
 
 class ApiError extends Error {
 

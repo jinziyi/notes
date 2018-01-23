@@ -2,5 +2,6 @@
 .idea
 node_modules
 notes-server/public/images/
+notes-server/config/database.js
 notes-server/public/javascripts/
 notes-server/logs
