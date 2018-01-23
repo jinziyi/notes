@@ -2,8 +2,6 @@
  * Created by cjy on 16/11/23.
  */
 const md5 = require('md5');
-const ApiError = require('../error/ApiError');
-const ApiErrorNames = require('../error/ApiErrorNames');
 const {addUser, getUser} = require('../lib/users');
 
 //获取用户
