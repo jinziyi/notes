@@ -2,8 +2,6 @@
  * Created by cjy on 16/11/23.
  */
 const md5 = require('md5');
-const ApiError = require('../error/ApiError');
-const ApiErrorNames = require('../error/ApiErrorNames');
 const {getItem, createItem, updateItem, deleteItem} = require('../lib/items');
 
 exports.getItem = async (ctx, next) => {
