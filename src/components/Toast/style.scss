@@ -1,0 +1,36 @@
+@import "../../style/vars";
+
+.c-toast-root {
+	position: fixed;
+	top: 30%;
+	width: 36%;
+	min-height: 25%;
+	left: 32%;
+	background: rgba(#000, .6);
+	color: #fff;
+	border-radius: .3rem;
+	@include flex(column);
+	padding: $padding;
+	z-index: 99;
+	will-change: transform, opacity;
+	transform: scale(1);
+	opacity: 1;
+	transition: transform ease-in-out .25s, opacity ease-in-out .25s;
+	pointer-events: auto;
+	&.hidden {
+		transition: transform ease-in-out .15s, opacity ease-in-out .15s;
+		transform: scale(1.15);
+		opacity: 0;
+		pointer-events: none;
+	}
+	.icon-box {
+		.icon {
+			font-size: 1.2rem;
+		}
+	}
+	.text {
+		padding-top: $padding;
+		font-size: .3rem;
+		text-align: center;
+	}
+}

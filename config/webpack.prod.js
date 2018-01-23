@@ -15,7 +15,7 @@ module.exports = merge(common, {
 			[__dirname + '/../dist'],
 			{
 				root: __dirname + '/..',       　　　　	//根目录
-				exclude: ['dll'],
+				exclude: ['dll', 'PWA'],
 				verbose: true,        　　　　　　　　　　//开启在控制台输出信息
 				dry: false        　　　　　　　　　　//启用删除文件
 			}
@@ -46,11 +46,6 @@ module.exports = merge(common, {
 					fallback: 'style-loader',
 					use: [{
 						loader: 'css-loader',
-						options: {
-							modules: true,
-							importLoaders: 1,
-							localIdentName: '[local]-[hash:base64:5]',
-						}
 					}, 'sass-loader', {
 						loader: 'postcss-loader',
 						options: {

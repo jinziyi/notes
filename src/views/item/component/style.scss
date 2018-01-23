@@ -1,0 +1,33 @@
+@import "../../../style/vars";
+
+.v-item-root {
+	height: 100%;
+	padding: .6rem 0;
+	.main {
+		@include flex();
+		justify-content: space-between;
+		background: #fff;
+		.prps {
+			flex: 1;
+		}
+		.favour {
+			padding: 0 $padding;
+			.icon-heart-o {
+				font-size: .5rem;
+			}
+			.icon-heart {
+				@extend .icon-heart-o;
+				color: #e73425;
+			}
+		}
+	}
+	.remain {
+		padding: $padding 0;
+	}
+	.button-box{
+		padding: $padding;
+		.btn{
+			margin-bottom: $padding / 2;
+		}
+	}
+}

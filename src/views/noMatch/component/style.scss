@@ -1,0 +1,12 @@
+@import "../../../style/vars";
+
+.v-no-match-root {
+	height: 100%;
+	@include flex(column);
+	font-size: .3rem;
+	.go-back{
+		color: $primary-color;
+		padding-top: $padding;
+		text-decoration: underline;
+	}
+}

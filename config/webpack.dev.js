@@ -12,6 +12,7 @@ module.exports = merge(common, {
 	output: {
 		filename: '[name].bundle.js',
 		path: path.resolve(__dirname, '../dist'),
+		publicPath: '/',
 	},
 	devServer: {
 		stats: {
@@ -21,6 +22,10 @@ module.exports = merge(common, {
 		contentBase: path.resolve(__dirname, '../dist'),
 		historyApiFallback: true,
 		hot: true,
+		host: '0.0.0.0',
+		proxy: {
+			"/api": "http://localhost:3001"
+		},
 		port: 3000,
 		clientLogLevel: 'info',
 		compress: true,
@@ -41,11 +46,6 @@ module.exports = merge(common, {
 				use: ['style-loader',
 					{
 						loader: 'css-loader',
-						options: {
-							modules: true,
-							importLoaders: 1,
-							localIdentName: '[local]-[hash:base64:5]',
-						}
 					}, 'sass-loader', {
 						loader: 'postcss-loader',
 						options: {

@@ -1,23 +1,132 @@
-:global {
-	html, body {
-		background: $bg-color;
-		height: 100%;
-		width: 100%;
-		position: relative;
-		margin: 0;
-		padding: 0;
-		@include flex();
-	}
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	white-space: pre-wrap;
+	word-break: break-all;
+	word-wrap: break-word;
+	font-size: .3rem;
+}
 
-	a{
-		text-decoration: none;
-	}
+html, body {
+	background: $bg-color;
+	height: 100%;
+	width: 100%;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	@include flex();
+	color: $black;
+	font-size: .3rem;
+}
 
-	.center{
-		@include flex();
-		text-align: center;
-		&.col{
-			flex-direction: column;
+#react-root {
+	width: 100%;
+	height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+input{
+	border: none;
+	outline: none;
+}
+
+.btn {
+	background: $primary-color;
+	color: #fff;
+	height: .8rem;
+	font-size: .3rem;
+	@include flex();
+	text-align: center;
+	border-radius: .1rem;
+	&:active {
+		background: $primary-color * .85;
+	}
+	&.danger {
+		background: $error;
+		&:active {
+			background: $error * .85;
 		}
 	}
+}
+
+.primary {
+	color: $primary-color;
+}
+
+.success{
+	color: $success;
+}
+
+.warning{
+	color: $warning;
+}
+
+.error{
+	color: $error;
+}
+
+.scroll {
+	overflow: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+
+.center {
+	@include flex();
+	text-align: center;
+	&.col {
+		flex-direction: column;
+	}
+}
+
+.tap-position {
+	position: fixed;
+	right: 10%;
+	bottom: 10%;
+	font-size: .8rem;
+}
+
+.logo{
+	display: inline-block;
+	font-size: 1.5rem;
+	animation: logo linear 16s infinite;
+	@keyframes logo {
+		0%{
+			transform: rotate(0);
+			color: $primary-color;
+		}
+		50%{
+			transform: rotate(180deg);
+			color: #fff;
+		}
+		100%{
+			transform: rotate(360deg);
+			color: $primary-color;
+		}
+	}
+}
+
+.height-100{
+	height: 100%;
+}
+
+.fade-enter {
+	opacity: 0.01;
+}
+
+.fade-enter.fade-enter-active {
+	opacity: 1;
+	transition: opacity 500ms ease-in;
+}
+
+.fade-leave {
+	opacity: 1;
+}
+
+.fade-leave.fade-leave-active {
+	opacity: 0.01;
+	transition: opacity 300ms ease-in;
 }

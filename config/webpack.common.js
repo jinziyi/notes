@@ -18,6 +18,7 @@ module.exports = {
 		filename: '[name].[chunkhash].js',
 		chunkFilename: '[name].[chunkhash].js',
 		path: path.resolve(__dirname, '../dist'),
+		publicPath: '/',
 	},
 	context: root,
 	plugins: [
@@ -89,7 +90,9 @@ module.exports = {
 		alias: {
 			'components': __dirname + '/../src/components',
 			'containers': __dirname + '/../src/containers',
+			'constants': __dirname + '/../src/constants',
 			'actions': __dirname + '/../src/redux/reducers',
+			'utils': __dirname + '/../src/utils',
 		}
 	}
 };

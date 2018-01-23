@@ -2,9 +2,9 @@
  * Created by cjy on 16/11/23.
  */
 
-import React, {Component} from 'react'
+import React, {PureComponent} from 'react'
 
-class Bundle extends Component {
+class Bundle extends PureComponent {
 	state = {
 		mod: null
 	}

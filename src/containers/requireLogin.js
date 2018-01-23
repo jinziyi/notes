@@ -4,11 +4,13 @@
 import React, {Component} from 'react';
 import {Redirect} from 'react-router-dom';
 
-export default (SourceComponent) => class extends Component{
-	render(){
-		if(this.props.isLogin){
+export default (SourceComponent) => class extends Component {
+	static displayName = 'RequireLogin_' + (SourceComponent.displayName || SourceComponent.name || 'Component')
+
+	render() {
+		if (this.props.isLogin) {
 			return <SourceComponent {...this.props}/>
-		}else {
+		} else {
 			return <Redirect to="/login"/>
 		}
 	}

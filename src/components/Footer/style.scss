@@ -1,0 +1,28 @@
+@import "../../style/vars";
+
+.c-footer-root {
+	width: 100%;
+	height: .9rem;
+	@include flex();
+	background: #f9f9f9;
+	border-top: 1px solid $border-color;
+	justify-content: space-around;
+	.nav-item {
+		@include flex(column);
+		color: $icon-default;
+		.icons {
+			font-size: .42rem;
+			color: $icon-default;
+		}
+		.text {
+			font-size: .18rem;
+			padding-top: .12rem;
+		}
+		&.primary {
+			color: $primary-color;
+			.icons {
+				color: $primary-color;
+			}
+		}
+	}
+}

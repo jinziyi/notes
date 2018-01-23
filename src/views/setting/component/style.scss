@@ -1,0 +1,20 @@
+@import "../../../style/vars";
+
+.v-setting-root{
+	@include flex(column);
+	align-items: stretch;
+	height: 100%;
+	.welcome{
+		padding: $padding;
+		font-size: 1rem;
+		.username{
+			color: $primary-color;
+		}
+	}
+	.body{
+		flex: 1;
+	}
+	.btn-box{
+		padding: $padding;
+	}
+}

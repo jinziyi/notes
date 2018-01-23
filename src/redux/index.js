@@ -6,7 +6,9 @@ import {createStore, combineReducers, applyMiddleware} from 'redux'
 import {Provider} from 'react-redux'
 import createHistory from 'history/createBrowserHistory'
 import {ConnectedRouter, routerReducer, routerMiddleware, push} from 'react-router-redux';
+import {composeWithDevTools} from 'redux-devtools-extension/developmentOnly';
 import thunk from 'redux-thunk';
+import callApiMiddleware from './middlewares/ajax';
 import reducers from './reducers'
 
 const history = createHistory();
@@ -17,7 +19,7 @@ export const store = createStore(
 		...reducers,
 		router: routerReducer
 	}),
-	applyMiddleware(middleware, thunk)
+	composeWithDevTools(applyMiddleware(middleware, thunk, callApiMiddleware))
 )
 
 export default (Component) => {
