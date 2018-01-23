@@ -19,7 +19,7 @@ const distPath = '/../dist';
 onerror(app)
 
 // middlewares
-const main = serve(path.join(__dirname, distPath), {maxage: 7 * 24 * 60 * 60});
+const main = serve(path.join(__dirname, distPath), {maxage: 7 * 24 * 60 * 60 * 1000});
 app.use(compress())
 app.use(main)
 app.use(bodyparser({
@@ -69,7 +69,10 @@ const sessionMysqlConfig = {
 }
 app.use(session({
 	key: 'USER_SID',
-	store: new MysqlStore(sessionMysqlConfig)
+	store: new MysqlStore(sessionMysqlConfig),
+	cookie: {
+		maxage: 3 * 24 * 60 * 60 * 1000
+	},
 }))
 router.use('/api', index.routes(), index.allowedMethods());
 router.get('*', async (ctx, next) => {
