@@ -77,6 +77,9 @@ app.use(session({
 router.use('/api', index.routes(), index.allowedMethods());
 router.get('*', async (ctx, next) => {
 	ctx.response.type = 'html';
+	ctx.response.headers = {
+		'Content-Security-Policy': 'script-src "self"',
+	}
 	ctx.response.body = fs.createReadStream(path.join(__dirname, '/../dist/index.html'));
 })
 app.use(router.routes(), router.allowedMethods())
