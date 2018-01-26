@@ -13,10 +13,18 @@ const logger = require('koa-logger')
 const router = require('koa-router')()
 const session = require('koa-session-minimal');
 const MysqlStore = require('koa-mysql-session');
+const helmet = require('koa-helmet');
 const index = require('./routes/index')
 const distPath = '/../dist';
 // error handler
 onerror(app)
+
+app.use(helmet.contentSecurityPolicy({
+	directives: {
+		scriptSrc: ["'self' 'unsafe-eval'"],
+		styleSrc: ["'self'"]
+	}
+}))
 
 // middlewares
 const main = serve(path.join(__dirname, distPath), {maxage: 7 * 24 * 60 * 60 * 1000});
@@ -33,6 +41,7 @@ app.use(views(__dirname + '/views'))
 
 //log工具
 const logUtil = require('./utils/log_util');
+
 
 
 // logger
