@@ -18,11 +18,14 @@ const index = require('./routes/index')
 const distPath = '/../dist';
 // error handler
 onerror(app)
-
+app.use(async (ctx, next) => {                                                                               if(ctx.protocol !== 'https'){                                                      
+        return ctx.redirect('https://' + ctx.host + ctx.url + ctx.querystring)
+        }    await next()                                                                              
+})  
 app.use(helmet.contentSecurityPolicy({
 	directives: {
-		scriptSrc: ["'self' 'unsafe-eval'"],
-		styleSrc: ["'self'"]
+		scriptSrc: ["'self' 'unsafe-eval' 'unsafe-inline'"],
+		styleSrc: ["'self' 'unsafe-inline'"]
 	}
 }))
 
@@ -82,7 +85,7 @@ app.use(session({
 	cookie: {
 		maxage: 3 * 24 * 60 * 60 * 1000
 	},
-}))
+})) 
 router.use('/api', index.routes(), index.allowedMethods());
 router.get('*', async (ctx, next) => {
 	ctx.response.type = 'html';
@@ -92,7 +95,6 @@ router.get('*', async (ctx, next) => {
 	ctx.response.body = fs.createReadStream(path.join(__dirname, '/../dist/index.html'));
 })
 app.use(router.routes(), router.allowedMethods())
-
 // error-handling
 app.on('error', (err, ctx) => {
 	console.error('server error', err, ctx)
