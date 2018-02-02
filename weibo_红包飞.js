@@ -2,7 +2,7 @@
  * Created by cjy on 16/11/23.
  */
 
-const hongbao = ({want, give, safe} = {}) => {
+const hongbao = ({want, give, safe} = {}, cb = e => e) => {
 
 	let user = {};
 	let isSuccess = false;
@@ -75,6 +75,7 @@ const hongbao = ({want, give, safe} = {}) => {
 				isSuccess = true;
 				const msg = `查询数据${fetchCount}次，尝试换卡${tryCount}次，成功使用 ${data.wantCardname} 换得 ${want}`;
 				console.log(msg)
+				cb(msg)
 			}, e => e)
 		});
 	}
@@ -103,4 +104,21 @@ const hongbao = ({want, give, safe} = {}) => {
 			return `换卡失败，获取信息${fetchCount}次，共尝试换卡${tryCount}次。`
 		},
 	}
+}
+
+const hongbaoAll = () => {
+	let nodes = [...document.querySelectorAll('[data-cname][data-cnum="0"]')].map(e => e.attributes['data-cname'].nodeValue);
+	let targets = [...nodes];
+	let msgs = [];
+	let uid = Object(window.$config).cuid || document.querySelector('[data-uid]') && document.querySelector('[data-uid]').attributes['data-uid'].nodeValue;
+	const start = () => {
+		hongbao({want: targets.pop(), safe: true,}, msg => {
+			msgs.push(msg);
+			if (!targets.length) {
+				return msgs.join('\n');
+			}
+			start();
+		})
+	}
+	start();
 }
