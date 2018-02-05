@@ -1,68 +1,47 @@
-const CACHE_NAME = 'notes-v1';
+const cacheName = 'notes-v1';
 
-const urlsToCache = [
+const filesToCache = [
 	'./',
 	'./images/snow-48.png',
 	'./images/snow-96.png',
 	'./images/snow-192.png',
 	'./images/snow-512.png',
 	'../',
+	'../dll/vendor.4092ca4ff034abb69c25.js',
+	'../app.bundle.js',
 	'../index.html',
-	'../app.9f7fe7402d5f6ba9b699b376eb71a5ce.css',
-	'../app.accb1f44fdd4ce791df9.js',
 ]
 
-self.addEventListener('install', event => {
-	console.log('V1 installing…');
-	self.skipWaiting();
-	// cache a cat SVG
-	event.waitUntil(
-		caches.open(CACHE_NAME)
-			.then(cache => cache.addAll(urlsToCache))
+self.addEventListener('install', function(e) {
+	console.log('[ServiceWorker] Install');
+	e.waitUntil(
+		caches.open(cacheName).then(function(cache) {
+			console.log('[ServiceWorker] Caching app shell');
+			return cache.addAll(filesToCache);
+		})
 	);
 });
 
-self.addEventListener('fetch', function (event) {
-	event.respondWith(
-		caches.match(event.request)
-			.then(function (response) {
-				// Cache hit - return response
-				if (response) {
-					return response;
+self.addEventListener('activate', function(e) {
+	console.log('[ServiceWorker] Activate!');
+	e.waitUntil(
+		caches.keys().then(function(keyList) {
+			return Promise.all(keyList.map(function(key) {
+				if (key !== cacheName) {
+					console.log('[ServiceWorker] Removing old cache', key);
+					return caches.delete(key);
 				}
-
-				const fetchRequest = event.request.clone();
-
-				return fetch(fetchRequest).then(
-					function (response) {
-						// Check if we received a valid response
-						if (!response || response.status !== 200 || response.type !== 'basic') {
-							return response;
-						}
-
-						const responseToCache = response.clone();
-
-						caches.open(CACHE_NAME)
-							.then(function (cache) {
-								cache.put(event.request, responseToCache);
-							});
-
-						return response;
-					}
-				);
-			})
+			}));
+		})
 	);
+	return self.clients.claim();
 });
 
-self.addEventListener('activate', function (event) {
-
-	const cacheWhitelist = [];
-
-	event.waitUntil(
-		caches.keys().then(function (cacheNames) {
-			return Promise.all(
-				cacheNames.filter(cacheName => !cacheWhitelist.includes(cacheName)).map(cacheName => caches.delete(cacheName))
-			);
+self.addEventListener('fetch', function(e) {
+	console.log('[ServiceWorker] Fetch', e.request.url);
+	e.respondWith(
+		caches.match(e.request).then(function(response) {
+			return response || fetch(e.request);
 		})
 	);
 });

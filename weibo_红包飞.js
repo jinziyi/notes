@@ -64,7 +64,7 @@ const hongbao = ({want, give, safe} = {}, cb = e => e) => {
 			}
 			exchange({
 				giveName: data.wantCardname,
-				wantName: data.giveCardnam,
+				wantName: data.giveCardname,
 				num: data.myCardNum,
 				giveImg: data.wantCardpic,
 				wantImg: data.giveCardpic,
@@ -104,21 +104,4 @@ const hongbao = ({want, give, safe} = {}, cb = e => e) => {
 			return `换卡失败，获取信息${fetchCount}次，共尝试换卡${tryCount}次。`
 		},
 	}
-}
-
-const hongbaoAll = () => {
-	let nodes = [...document.querySelectorAll('[data-cname][data-cnum="0"]')].map(e => e.attributes['data-cname'].nodeValue);
-	let targets = [...nodes];
-	let msgs = [];
-	let uid = Object(window.$config).cuid || document.querySelector('[data-uid]') && document.querySelector('[data-uid]').attributes['data-uid'].nodeValue;
-	const start = () => {
-		hongbao({want: targets.pop(), safe: true,}, msg => {
-			msgs.push(msg);
-			if (!targets.length) {
-				return msgs.join('\n');
-			}
-			start();
-		})
-	}
-	start();
 }

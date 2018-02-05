@@ -16,18 +16,18 @@ ReactDOM.render(<AppContainer warnings={false}><App/></AppContainer>, document.g
 		hijack(rootId, document.body.children.length, [window.location.origin, 'chrome-extension:']);
 	}
 	formatFont(750);	//移动端项目下与psd映射初始化rem值
-});
 
-if ('serviceWorker' in navigator) {
-	window.addEventListener('load', function () {
-		navigator.serviceWorker.register('/PWA/sw.js').then(function (registration) {
-			console.log('ServiceWorker registration successful with scope: ', registration.scope);
-		}).catch(function (err) {
-			console.log('ServiceWorker registration failed: ', err);
+	if ('serviceWorker' in navigator) {
+		window.addEventListener('load', function () {
+			navigator.serviceWorker.register('/PWA/sw.js').then(function (registration) {
+				console.log('ServiceWorker registration successful with scope: ', registration.scope);
+			}).catch(function (err) {
+				console.log('ServiceWorker registration failed: ', err);
+			});
 		});
-	});
-}
+	}
 
+});
 if (module.hot) {
 	module.hot.accept();
 }

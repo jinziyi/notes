@@ -2,27 +2,32 @@
  * Created by cjy on 16/11/23.
  */
 
-const hongbao = ({want: _want, give, auto = false, safe} = {}) => {
-
+const hongbao = ({want: _want, give, safe, auto} = {}) => {
 	let user = {};
-	let isSuccess = false;
-	let uid = Object(window.$config).cuid || document.querySelector('[data-uid]') && document.querySelector('[data-uid]').attributes['data-uid'].nodeValue;
+	let msgs = [];
 	let fetchCount = 0;
 	let tryCount = 0;
-	let nodes = [...document.querySelectorAll('[data-cname][data-cnum="0"]')].map(e => e.attributes['data-cname'].nodeValue);
-	let targets = [...nodes];
+	let done = false;
+	let doms = [...document.querySelectorAll('[data-cname][data-cnum="0"]')];
+	let targets = _want && _want.length ? (typeof _want === 'string' ? [_want] : _want) : doms.map(e => e.attributes['data-cname'].nodeValue);
+
+	let uid = Object(window.$config).cuid || document.querySelector('[data-uid]') && document.querySelector('[data-uid]').attributes['data-uid'].nodeValue;
+	let t;
+
+	const getNums = () => [...document.querySelectorAll('[data-cname]')].map(e => e.attributes['data-cnum'].nodeValue)
+
 	if (!uid) {
 		return console.error(`请先登陆微博并跳转至红包飞页面
 		https://hongbao.weibo.cn/h5/csk/index?portrait_only=1&sinainternalbrowser=topnav&share_menu=1&disable_sinaurl=1`)
 	}
-	if (auto && !targets.length) {
-		return console.log(`您的卡已经集齐～`)
+
+	if (safe && getNums().find(e => e > 1) === undefined) {
+		return console.log(`没有多于1张的卡`)
 	}
 
-	let want = auto ? targets[0] : _want;
-	let msgs = [];
-	let done = false;
-	let t;
+	if (!targets.length) {
+		return console.log(`您的卡已经集齐～`)
+	}
 
 	const getData = (p = 1, cb) => {
 		fetchCount++;
@@ -55,11 +60,7 @@ const hongbao = ({want: _want, give, auto = false, safe} = {}) => {
 	}
 
 	const findWanted = (dataList) => {
-		if (want === undefined) {
-			console.error('want参数缺失');
-			return false
-		}
-		return dataList.filter(dt => give ? (dt.giveCardname == want && dt.wantCardname == give) : dt.giveCardname == want).forEach(data => {
+		dataList.filter(dt => give ? (targets.includes(dt.giveCardname) && dt.wantCardname == give) : targets.includes(dt.giveCardname)).forEach(data => {
 			if (safe && data.myCardNum <= 1) {
 				return false
 			}
@@ -73,17 +74,24 @@ const hongbao = ({want: _want, give, auto = false, safe} = {}) => {
 				giveUname: user.screen_name,
 				wantUname: data.screen_name,
 			}, res => {
-				isSuccess = true;
-				targets = targets.filter(e => e !== want);
-				want = targets[0];
-				if (!auto || !want) {
-					done = true;
+				const msg = `查询数据${fetchCount}次，尝试换卡${tryCount}次，成功使用 ${data.wantCardname} 换得 ${data.giveCardname}`;
+				targets = targets.filter(target => target !== data.giveCardname);
+				if (!auto) {
+					console.log('!auto')
 					clearInterval(t);
-					return false;
+					done = true;
+				} else {
+					msgs.push(msg);
+					if (!targets.length) {
+						done = true;
+						console.log(targets);
+						clearInterval(t);
+						console.group('result')
+						console.group(msgs.forEach(console.log));
+						console.groupEnd('result');
+						return false;
+					}
 				}
-				const msg = `查询数据${fetchCount}次，尝试换卡${tryCount}次，成功使用 ${data.wantCardname} 换得 ${want}`;
-				msgs.push(msg);
-				console.log(msg)
 			}, e => e)
 		});
 	}
@@ -91,18 +99,8 @@ const hongbao = ({want: _want, give, auto = false, safe} = {}) => {
 	const cbHandler = (data, pageCount, page) => {
 		findWanted(data,)
 		if (done) {
-			clearInterval(t);
-			return false;
-		}
-		if (isSuccess) {
-			if (auto && targets.length) {
-				want = targets.pop();
-			}
-			if (!auto && !targets.length) {
-				done = true;
-				clearInterval(t)
-				return console.log(msgs.join(';\n'))
-			}
+			clearInterval(t)
+			return;
 		}
 		if (pageCount > page) {
 			getData(page + 1, cbHandler);
@@ -114,12 +112,12 @@ const hongbao = ({want: _want, give, auto = false, safe} = {}) => {
 	getData(1, cbHandler);
 	t = setInterval(e => {
 		getData(1, cbHandler)
-	}, 500)
+	}, 2000)
 	return {
 		abort: () => {
 			clearInterval(t);
 			done = true;
-			return console.log(msgs.join('\n'));
+			return `换卡失败，获取信息${fetchCount}次，共尝试换卡${tryCount}次。`
 		},
 	}
 }
