@@ -76,6 +76,7 @@ const hongbao = ({want: _want, give, safe, auto} = {}) => {
 			}, res => {
 				const msg = `查询数据${fetchCount}次，尝试换卡${tryCount}次，成功使用 ${data.wantCardname} 换得 ${data.giveCardname}`;
 				targets = targets.filter(target => target !== data.giveCardname);
+				tryCount = 0;
 				if (!auto) {
 					console.log(msg)
 					clearInterval(t);
