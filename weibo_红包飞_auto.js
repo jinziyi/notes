@@ -77,17 +77,17 @@ const hongbao = ({want: _want, give, safe, auto} = {}) => {
 				const msg = `查询数据${fetchCount}次，尝试换卡${tryCount}次，成功使用 ${data.wantCardname} 换得 ${data.giveCardname}`;
 				targets = targets.filter(target => target !== data.giveCardname);
 				if (!auto) {
-					console.log('!auto')
+					console.log(msg)
 					clearInterval(t);
 					done = true;
 				} else {
+					console.log(msg);
 					msgs.push(msg);
 					if (!targets.length) {
 						done = true;
-						console.log(targets);
 						clearInterval(t);
 						console.group('result')
-						console.group(msgs.forEach(console.log));
+						msgs.forEach(console.log);
 						console.groupEnd('result');
 						return false;
 					}
