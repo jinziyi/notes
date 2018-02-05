@@ -17,17 +17,7 @@ ReactDOM.render(<AppContainer warnings={false}><App/></AppContainer>, document.g
 	}
 	formatFont(750);	//移动端项目下与psd映射初始化rem值
 
-<<<<<<< HEAD
-if ('serviceWorker' in navigator) {
-	window.addEventListener('load', function () {
-		navigator.serviceWorker.register('/PWA/sw.js').then(function (registration) {
-			console.log('ServiceWorker registration successful with scope: ', registration.scope);
-		}).catch(function (err) {
-			console.log('ServiceWorker registration failed: ', err);
-		});
-	});
-}
-=======
+
 	if ('serviceWorker' in navigator) {
 		window.addEventListener('load', function () {
 			navigator.serviceWorker.register('/PWA/sw.js').then(function (registration) {
@@ -37,8 +27,6 @@ if ('serviceWorker' in navigator) {
 			});
 		});
 	}
->>>>>>> 296ebd11dba4f149e111c13028c545cd70150e9e
-
 });
 if (module.hot) {
 	module.hot.accept();

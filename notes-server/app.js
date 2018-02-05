@@ -18,14 +18,14 @@ const index = require('./routes/index')
 const distPath = '/../dist';
 // error handler
 onerror(app)
-if (process.env.NODE_ENV === 'production') {
-	app.use(async (ctx, next) => {
-		if (ctx.protocol !== 'https') {
-			return ctx.redirect('https://' + ctx.host + ctx.url + ctx.querystring)
-		}
-		await next()
-	})
-}
+// if (process.env.NODE_ENV === 'production') {
+// 	app.use(async (ctx, next) => {
+// 		if (ctx.protocol !== 'https') {
+// 			return ctx.redirect('https://' + ctx.host + ctx.url + ctx.querystring)
+// 		}
+// 		await next()
+// 	})
+// }
 app.use(helmet.contentSecurityPolicy({
 	directives: {
 		scriptSrc: ["'self' 'unsafe-eval' 'unsafe-inline'"],
