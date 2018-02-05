@@ -87,7 +87,7 @@ const hongbao = ({want: _want, give, safe, auto} = {}) => {
 						done = true;
 						clearInterval(t);
 						console.group('result')
-						msgs.forEach(console.log);
+						msgs.forEach(msg => console.log(msg));
 						console.groupEnd('result');
 						return false;
 					}
