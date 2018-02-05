@@ -86,9 +86,9 @@ const hongbao = ({want: _want, give, safe, auto} = {}) => {
 					if (!targets.length) {
 						done = true;
 						clearInterval(t);
-						console.group('result')
-						msgs.forEach(msg => console.log(msg));
-						console.groupEnd('result');
+						console.group('%c运行--------------------------结果', 'color: blue; font-weight: bold; font-size:1.5em')
+						msgs.forEach(msg => console.log(`%c${msg}`, 'color: green;font-size:1.2em; font-weight: bold'));
+						console.groupEnd('%c运行--------------------------结果', 'color: blue; font-weight: bold; font-size:1.5em')
 						return false;
 					}
 				}
