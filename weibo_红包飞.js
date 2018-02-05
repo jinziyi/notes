@@ -2,12 +2,20 @@
  * Created by cjy on 16/11/23.
  */
 
+<<<<<<< HEAD
+const hongbao = ({uid = 2238086712, want = 1, give, safe} = {}) => {
+=======
 const hongbao = ({want, give, safe} = {}, cb = e => e) => {
+>>>>>>> 296ebd11dba4f149e111c13028c545cd70150e9e
 
 	let user = {};
 	let isSuccess = false;
 	let fetchCount = 0;
 	let tryCount = 0;
+<<<<<<< HEAD
+	let t;
+
+=======
 	let doms = [...document.querySelectorAll('[data-cname][data-cnum="0"]')];
 	let targets = doms.map(e => e.attributes['data-cname'].nodeValue);
 
@@ -23,6 +31,7 @@ const hongbao = ({want, give, safe} = {}, cb = e => e) => {
 		return console.log(`您的卡已经集齐～`)
 	}
 
+>>>>>>> 296ebd11dba4f149e111c13028c545cd70150e9e
 	const getData = (p = 1, cb) => {
 		fetchCount++;
 		console.count('获取信息')
@@ -64,7 +73,11 @@ const hongbao = ({want, give, safe} = {}, cb = e => e) => {
 			}
 			exchange({
 				giveName: data.wantCardname,
+<<<<<<< HEAD
+				wantName: data.giveCardnam,
+=======
 				wantName: data.giveCardname,
+>>>>>>> 296ebd11dba4f149e111c13028c545cd70150e9e
 				num: data.myCardNum,
 				giveImg: data.wantCardpic,
 				wantImg: data.giveCardpic,
@@ -73,15 +86,23 @@ const hongbao = ({want, give, safe} = {}, cb = e => e) => {
 				wantUname: data.screen_name,
 			}, res => {
 				isSuccess = true;
+<<<<<<< HEAD
+				console.log(`查询数据${fetchCount}次，尝试换卡${tryCount}次，成功使用 ${data.wantCardname} 换得 ${want}`)
+=======
 				const msg = `查询数据${fetchCount}次，尝试换卡${tryCount}次，成功使用 ${data.wantCardname} 换得 ${want}`;
 				console.log(msg)
 				cb(msg)
+>>>>>>> 296ebd11dba4f149e111c13028c545cd70150e9e
 			}, e => e)
 		});
 	}
 
 	const cbHandler = (data, pageCount, page) => {
+<<<<<<< HEAD
+		findWanted(data,);
+=======
 		findWanted(data,)
+>>>>>>> 296ebd11dba4f149e111c13028c545cd70150e9e
 		if (isSuccess) {
 			clearInterval(t)
 			return;
@@ -93,14 +114,20 @@ const hongbao = ({want, give, safe} = {}, cb = e => e) => {
 		}
 	}
 
+<<<<<<< HEAD
+=======
 	getData(1, cbHandler);
+>>>>>>> 296ebd11dba4f149e111c13028c545cd70150e9e
 	t = setInterval(e => {
 		getData(1, cbHandler)
 	}, 2000)
 	return {
 		abort: () => {
 			clearInterval(t);
+<<<<<<< HEAD
+=======
 			done = true;
+>>>>>>> 296ebd11dba4f149e111c13028c545cd70150e9e
 			return `换卡失败，获取信息${fetchCount}次，共尝试换卡${tryCount}次。`
 		},
 	}
