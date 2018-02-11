@@ -27,7 +27,7 @@ class Toast extends PureComponent {
 	render() {
 		const {props, types} = this;
 		const {isShow, text, toastType = 'success'} = props;
-		const icon = types[toastType]
+		const icon = types[toastType] || toastType;
 		return (
 			<div className={`c-toast-root ${isShow ? '' : 'hidden'}`}>
 				<div className="icon-box">

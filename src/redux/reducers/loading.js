@@ -5,16 +5,16 @@ import {connect} from 'react-redux';
 import {createReducer} from '../utils';
 
 //action
-export const TOAST_SHOW = Symbol('TOAST_SHOW');
-export const TOAST_HIDE = Symbol('TOAST_HIDE');
+export const LOADING_SHOW = Symbol('LOADING_SHOW');
+export const LOADING_HIDE = Symbol('LOADING_HIDE');
 
 export const show = (data) => dispatch => dispatch({
-	type: TOAST_SHOW,
+	type: LOADING_SHOW,
 	data,
 })
 
 export const hide = (data) => dispatch => dispatch({
-	type: TOAST_HIDE,
+	type: LOADING_HIDE,
 	data,
 })
 
@@ -22,22 +22,21 @@ export const hide = (data) => dispatch => dispatch({
 //reducer
 const initialState = {
 	isShow: false,
-	toastType: 'success',
-	text: '操作成功',
-	autoClose: 1500,
+	toastType: 'loading',
+	text: '加载中',
 };
 
 export const reducers = {
-	[TOAST_SHOW]: (toast, {data}) => ({...toast, toastType: 'success', ...data, isShow: true,}),
-	[TOAST_HIDE]: (toast) => ({...toast, isShow: false,}),
+	[LOADING_SHOW]: (toast) => ({...toast, isShow: true,}),
+	[LOADING_HIDE]: (toast) => ({...toast, isShow: false,}),
 }
 
 export default createReducer(initialState, reducers);
 
-export const connectToast = (Component) => {
+export const connectLoading = (Component) => {
 	return connect(state => {
-		const {toast} = state;
-		return toast;
+		const {loading} = state;
+		return loading;
 	}, {
 		hide,
 	})(Component)

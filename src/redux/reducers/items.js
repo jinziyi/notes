@@ -15,7 +15,6 @@ export const updateItem = (params, cb) => ({
 	callAPI: () => {
 		return fetch('/api/items/update', params)
 	},
-	fns: [e => true, cb]
 })
 
 export const createItem = (params, cb) => ({
@@ -23,7 +22,6 @@ export const createItem = (params, cb) => ({
 	callAPI: () => {
 		return fetch('/api/items/create', params)
 	},
-	fns: [e => true, cb]
 })
 
 export const deleteItem = (id, cb) => ({
@@ -31,7 +29,6 @@ export const deleteItem = (id, cb) => ({
 	callAPI: () => {
 		return fetch('/api/items/delete', {id})
 	},
-	fns: [e => true, cb]
 })
 
 export const getItem = (cb) => ({
@@ -39,7 +36,6 @@ export const getItem = (cb) => ({
 	callAPI: () => {
 		return fetch('/api/items/get', {}, {method: 'GET'})
 	},
-	fns: [e => true, cb]
 })
 
 //reducer

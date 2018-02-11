@@ -2,11 +2,15 @@
  * Created by cjy on 16/11/23.
  */
 
+import {LOADING_SHOW, LOADING_HIDE} from '../reducers/loading';
+
 export default ({dispatch, getState}) => {
+	const loadingState = {};
 	return next => action => {
 		const {
 			types,
 			callAPI,
+			showLoading = true,
 			fns = [],   //fns可以不传
 			payload = {}
 		} = action;
@@ -39,6 +43,15 @@ export default ({dispatch, getState}) => {
 				isFetching: true
 			}
 		}));
+		const hash = types.join('|');
+		if (showLoading) {
+			loadingState[hash] = true;
+			setTimeout(e => {
+				if (loadingState[hash]) {
+					dispatch({type: LOADING_SHOW})
+				}
+			}, 1000)
+		}
 
 		return callAPI().then(res => res.json()).then(
 			res => {
@@ -50,6 +63,10 @@ export default ({dispatch, getState}) => {
 						success: true,
 					}
 				}));
+				if (showLoading) {
+					loadingState[hash] = false;
+					dispatch({type: LOADING_HIDE})
+				}
 				successFn(res);
 			},
 			err => {
@@ -61,6 +78,11 @@ export default ({dispatch, getState}) => {
 						err,
 					}
 				}));
+				if (showLoading) {
+					loadingState[hash] = false;
+					dispatch({type: LOADING_HIDE})
+				}
+				showLoading && dispatch({type: LOADING_HIDE})
 				failureFn(err)
 			}
 		)

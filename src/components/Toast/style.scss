@@ -27,6 +27,20 @@
 		.icon {
 			font-size: 1.2rem;
 		}
+		.icon-loading{
+			display: block;
+			transform: rotate(0deg);
+			font-size: 1rem;
+			animation: loading linear 1s infinite;
+			@keyframes loading {
+				0%{
+					transform: rotate(0deg);
+				}
+				100%{
+					transform: rotate(360deg);
+				}
+			}
+		}
 	}
 	.text {
 		padding-top: $padding;

@@ -15,6 +15,7 @@ import wrapWithRedux from '../redux';
 import ToastSeed from 'components/Toast';
 import Init from './Init';
 import {connectToast} from 'actions/toast';
+import {connectLoading} from 'actions/loading';
 import routes from 'constants/routes';
 import './style.scss';
 import Home from '../views/home';
@@ -26,6 +27,7 @@ import Item from '../views/item/route';
 import NoMatch from '../views/noMatch';
 
 const Toast = connectToast(ToastSeed);
+const Loading = connectLoading(ToastSeed);
 
 class App extends PureComponent {
 	render() {
@@ -50,6 +52,7 @@ class App extends PureComponent {
 					</AnimatedSwitch>
 					<Init/>
 					<Toast/>
+					<Loading/>
 				</div>
 			</Router>
 		)

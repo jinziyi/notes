@@ -21,7 +21,7 @@ export default class Login extends Component {
 		return (
 			<div className="v-login-root">
 				<div>
-					<i className="logo icon icon-snowflake-o"/>
+					<i className="logo icon icon-snow"/>
 				</div>
 				<div className="info-box">
 					<input type="text" value={account}
