@@ -5,8 +5,8 @@ import {connect} from 'react-redux';
 import {createReducer} from '../utils';
 
 //action
-export const TOAST_SHOW = Symbol('TOAST_SHOW');
-export const TOAST_HIDE = Symbol('TOAST_HIDE');
+export const TOAST_SHOW = 'TOAST_SHOW';
+export const TOAST_HIDE = 'TOAST_HIDE';
 
 export const show = (data) => dispatch => dispatch({
 	type: TOAST_SHOW,

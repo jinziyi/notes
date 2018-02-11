@@ -3,6 +3,7 @@
  */
 import React, {PureComponent} from 'react';
 import './style.scss';
+import routes from 'constants/routes';
 import Footer from 'components/Footer';
 import Item from 'components/Item';
 import requireLogin from 'containers/requireLogin';
@@ -12,7 +13,7 @@ export default class Setting extends PureComponent {
 	settings = [
 		{
 			title: '修改密码',
-			route: 'changePassword',
+			link: routes.password,
 		},
 	]
 

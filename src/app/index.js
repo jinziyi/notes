@@ -24,6 +24,7 @@ import Login from '../views/login/route';
 import Setting from '../views/setting/route';
 import Favour from '../views/favour/route';
 import Item from '../views/item/route';
+import Password from '../views/password/route';
 import NoMatch from '../views/noMatch';
 
 const Toast = connectToast(ToastSeed);
@@ -46,8 +47,9 @@ class App extends PureComponent {
 						<Route exact path={routes.item} component={Item}/>
 						<Route exact path={routes.create} component={Item}/>
 						<Route exact path={routes.register} component={Register}/>
-						<Route key="das" exact location={location} path={routes.login} component={Login}/>
+						<Route exact path={routes.login} component={Login}/>
 						<Route exact path={routes.setting} component={Setting}/>
+						<Route exact path={routes.password} component={Password}/>
 						<Route component={NoMatch}/>
 					</AnimatedSwitch>
 					<Init/>

@@ -7,6 +7,7 @@ const routes = {
 	home: '/',
 	setting: '/setting',
 	item: '/item/:itemId',
+	password: '/password',
 	favour: '/favour',
 	create: '/item/create',
 }

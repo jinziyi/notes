@@ -1,0 +1,26 @@
+@import "../../../style/vars";
+
+.v-password-root {
+	height: 100%;
+	padding: .6rem 0;
+	.form-box {
+		@include flex(column);
+		justify-content: space-between;
+		> div {
+			background: #fff;
+			margin-bottom: .15rem;
+			border-bottom: .01rem solid $border-color;
+			.item-left{
+				width: 20%;
+				text-align:justify;
+				text-align-last: justify;
+			}
+		}
+	}
+	.button-box {
+		padding: $padding;
+		.btn {
+			margin-bottom: $padding / 2;
+		}
+	}
+}

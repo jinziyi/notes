@@ -10,37 +10,35 @@ export const loginActions = createApiActions('LOGIN');
 export const logoutActions = createApiActions('LOGOUT');
 export const registerActions = createApiActions('REGISTER');
 
-export const login = (username, password, cb = e => e) => ({
+export const login = (username, password, successFn) => ({
 	types: [loginActions.request, loginActions.success, loginActions.error],
 	callAPI: () => {
 		return fetch('/api/users/login', {username, password})
 	},
-	fns: [e => true, cb]
+	fns: {successFn}
 })
 
-export const getUserInfo = (cb = e => e) => ({
+export const getUserInfo = () => ({
 	types: [getUserInfoActions.request, getUserInfoActions.success, getUserInfoActions.error],
 	callAPI: () => {
 		return fetch('/api/users/get', {}, {method: 'GET'})
 	},
-	fns: [e => true, cb, e => e]
 })
 
 
-export const logout = (cb) => ({
+export const logout = () => ({
 	types: [logoutActions.request, logoutActions.success, logoutActions.error],
 	callAPI: () => {
 		return fetch('/api/users/logout')
 	},
-	fns: [e => true, cb]
 })
 
-export const register = (params, cb) => ({
+export const register = (params, successFn) => ({
 	types: [registerActions.request, registerActions.success, registerActions.error],
 	callAPI: () => {
 		return fetch('/api/users/register', params)
 	},
-	fns: [e => true, cb]
+	fns: {successFn}
 })
 
 
